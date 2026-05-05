@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Step-by-Step Practice Guide | Grand Master Scott Craig</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--gold:#D4AF37;--red:#ac012c;--black:#121414;--surface:#1e2020;--surface-high:#282a2b;--surface-highest:#333535;--on-surface:#e2e2e2;--on-dim:#c4c7c7;--outline:#444748}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Work Sans',sans-serif;background:var(--black);color:var(--on-surface);overflow-x:hidden}
+.serif{font-family:'Noto Serif',serif}
+.hanji{background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0);background-size:32px 32px}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--outline);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;background:rgba(18,20,20,.95);backdrop-filter:blur(8px)}
+.logo{font-family:'Noto Serif',serif;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.back-link{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dim);text-decoration:none;transition:color .2s}
+.back-link:hover{color:var(--gold)}
+
+/* Hero */
+.hero{padding:80px 48px 60px;max-width:1200px;margin:0 auto;text-align:center}
+.hero-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.hero h1{font-family:'Noto Serif',serif;font-size:clamp(36px,5vw,64px);font-weight:900;line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
+.hero-desc{max-width:640px;margin:0 auto 40px;color:var(--on-dim);font-size:16px;line-height:1.7}
+.cal-divider{height:2px;background:linear-gradient(to right,transparent,var(--gold) 30%,var(--red) 50%,var(--gold) 70%,transparent);margin:0 48px;opacity:.45}
+
+/* Belt legend */
+.belt-legend{max-width:1200px;margin:0 auto;padding:32px 48px 0;display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.belt-chip{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--outline);padding:6px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dim)}
+.belt-swatch{width:14px;height:14px;flex-shrink:0;border:1px solid rgba(255,255,255,.15)}
+
+/* Gup grid */
+.gup-section{max-width:1200px;margin:0 auto;padding:40px 48px 80px}
+.section-head{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.section-head h2{font-family:'Noto Serif',serif;font-size:18px;font-weight:600;color:var(--gold)}
+.section-line{flex:1;height:1px;background:linear-gradient(to right,var(--outline),transparent)}
+.gup-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:48px}
+
+/* Pattern card */
+.pattern-card{background:var(--surface);border:1px solid var(--outline);display:flex;flex-direction:column;text-decoration:none;color:var(--on-surface);transition:border-color .25s,transform .2s;position:relative;overflow:hidden}
+.pattern-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.pattern-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+.card-top{padding:20px 20px 14px;display:flex;align-items:flex-start;justify-content:space-between}
+.gup-badge{font-size:9px;letter-spacing:.15em;text-transform:uppercase;background:var(--surface-highest);color:var(--gold);border:1px solid var(--outline);padding:3px 8px;font-weight:700}
+.move-count{font-family:'Noto Serif',serif;font-size:28px;font-weight:900;color:var(--gold);line-height:1}
+.move-count small{display:block;font-family:'Work Sans',sans-serif;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dim);font-weight:400;margin-top:2px}
+.card-mid{padding:0 20px 16px;border-bottom:1px solid var(--outline)}
+.card-mid h3{font-family:'Noto Serif',serif;font-size:20px;font-weight:700;margin-bottom:4px}
+.card-mid .korean{font-size:12px;color:var(--gold);font-style:italic;margin-bottom:8px}
+.card-mid .meaning{font-size:12px;color:var(--on-dim);line-height:1.5}
+.card-bot{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.belt-strip{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dim)}
+.belt-dot{width:12px;height:12px;border:1px solid rgba(255,255,255,.2)}
+.card-bot .arrow{font-size:18px;color:var(--gold);opacity:.5;transition:opacity .2s}
+.pattern-card:hover .arrow{opacity:1}
+.diagram-char{font-family:'Noto Serif',serif;font-size:11px;color:var(--on-dim);letter-spacing:.05em}
+
+/* Footer */
+.page-footer{border-top:1px solid var(--outline);padding:40px 48px;text-align:center;color:var(--on-dim);font-size:13px}
+.footer-logo{font-family:'Noto Serif',serif;font-size:20px;font-weight:700;color:var(--gold);margin-bottom:6px}
+
+@media(max-width:768px){.site-header,.hero,.gup-section,.belt-legend,.cal-divider{padding-left:20px;padding-right:20px}.hero{padding-top:48px}.gup-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="hanji">
+
+<header class="site-header">
+  <div class="logo">Grand Master Scott Craig · TKD Mastery</div>
+  <a class="back-link" href="index.html">← Back to Home</a>
+</header>
+
+<section class="hero">
+  <p class="hero-tag">ITF Tae Kwon Do · Grand Master Scott Craig</p>
+  <h1 class="serif">Step-by-Step<br/><span style="color:var(--gold)">Practice Guide</span></h1>
+  <p class="hero-desc">Full movement storyboards for all 12 core ITF forms — from Chon-Ji through Ge-Baek. Each storyboard shows every movement with illustrated stick figures, Korean technique names, stance details, and direction indicators.</p>
+</section>
+
+<div class="cal-divider"></div>
+
+<!-- Belt legend -->
+<div class="belt-legend">
+  <div class="belt-chip"><div class="belt-swatch" style="background:#f0f0f0"></div>White Belt</div>
+  <div class="belt-chip"><div class="belt-swatch" style="background:#f5c518"></div>Yellow Belt</div>
+  <div class="belt-chip"><div class="belt-swatch" style="background:#1a7a1a"></div>Green Belt</div>
+  <div class="belt-chip"><div class="belt-swatch" style="background:#1a3a7a"></div>Blue Belt</div>
+  <div class="belt-chip"><div class="belt-swatch" style="background:#8b0000"></div>Red Belt</div>
+  <div class="belt-chip"><div class="belt-swatch" style="background:#1a1a1a;border:1px solid #555"></div>Black Belt</div>
+</div>
+
+<div class="gup-section">
+
+  <!-- COLOR BELT FORMS -->
+  <div class="section-head">
+    <span style="background:var(--red);color:#fff;font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;font-weight:700">Colour Belt</span>
+    <h2>9th Gup → 1st Gup</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="gup-grid">
+
+    <!-- Chon-Ji -->
+    <a class="pattern-card" href="storyboards/chon-ji.html" style="--accent:#f5c518">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#f5c518"></div>
+      <div class="card-top">
+        <span class="gup-badge">9th Gup</span>
+        <div class="move-count">19<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Chon-Ji</h3>
+        <div class="korean">천지 · 天地</div>
+        <div class="meaning">Heaven and Earth — The creation of the world; the beginning of human history. The first pattern learned.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#f5c518"></div>Yellow Tag</div>
+        <div><span class="diagram-char">Diagram: +</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Dan-Gun -->
+    <a class="pattern-card" href="storyboards/dan-gun.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#f5c518"></div>
+      <div class="card-top">
+        <span class="gup-badge">8th Gup</span>
+        <div class="move-count">21<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Dan-Gun</h3>
+        <div class="korean">단군 · 檀君</div>
+        <div class="meaning">The legendary founder of Korea in 2333 BC. Introduces high section blocks for the first time.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#f5c518"></div>Yellow Belt</div>
+        <div><span class="diagram-char">Diagram: I</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Do-San -->
+    <a class="pattern-card" href="storyboards/do-san.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#1a7a1a"></div>
+      <div class="card-top">
+        <span class="gup-badge">7th Gup</span>
+        <div class="move-count">24<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Do-San</h3>
+        <div class="korean">도산 · 島山</div>
+        <div class="meaning">Pseudonym of patriot Ahn Chang-Ho (1876–1938). Introduces inner forearm blocks, knifehand strikes, and front kicks.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a7a1a"></div>Green Tag</div>
+        <div><span class="diagram-char">Diagram: I</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Won-Hyo -->
+    <a class="pattern-card" href="storyboards/won-hyo.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#1a7a1a"></div>
+      <div class="card-top">
+        <span class="gup-badge">6th Gup</span>
+        <div class="move-count">28<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Won-Hyo</h3>
+        <div class="korean">원효 · 元曉</div>
+        <div class="meaning">The noted monk who introduced Buddhism to the Silla Dynasty in 686 AD. Introduces the L-stance, heel kick, and circular blocks.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a7a1a"></div>Green Belt</div>
+        <div><span class="diagram-char">Diagram: I</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Yul-Gok -->
+    <a class="pattern-card" href="storyboards/yul-gok.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#1a3a7a"></div>
+      <div class="card-top">
+        <span class="gup-badge">5th Gup</span>
+        <div class="move-count">38<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Yul-Gok</h3>
+        <div class="korean">율곡 · 栗谷</div>
+        <div class="meaning">Pseudonym of philosopher Yi I (1536–1584), the "Confucius of Korea." 38 movements = his birthplace on the 38th parallel.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a3a7a"></div>Blue Tag</div>
+        <div><span class="diagram-char">Diagram: 士</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Joong-Gun -->
+    <a class="pattern-card" href="storyboards/joong-gun.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#1a3a7a"></div>
+      <div class="card-top">
+        <span class="gup-badge">4th Gup</span>
+        <div class="move-count">32<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Joong-Gun</h3>
+        <div class="korean">중근 · 重根</div>
+        <div class="meaning">Named after patriot Ahn Joong-Gun who assassinated the first Japanese Resident-General in 1909. Introduces the fingertip thrust.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a3a7a"></div>Blue Belt</div>
+        <div><span class="diagram-char">Diagram: 士</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Toi-Gye -->
+    <a class="pattern-card" href="storyboards/toi-gye.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#8b0000"></div>
+      <div class="card-top">
+        <span class="gup-badge">3rd Gup</span>
+        <div class="move-count">37<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Toi-Gye</h3>
+        <div class="korean">퇴계 · 退溪</div>
+        <div class="meaning">Pseudonym of scholar Yi Hwang (1501–1570), an authority on neo-Confucianism. 37 movements = his birthplace on the 37th parallel.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#8b0000"></div>Red Tag</div>
+        <div><span class="diagram-char">Diagram: 工</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Hwa-Rang -->
+    <a class="pattern-card" href="storyboards/hwa-rang.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#8b0000"></div>
+      <div class="card-top">
+        <span class="gup-badge">2nd Gup</span>
+        <div class="move-count">29<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Hwa-Rang</h3>
+        <div class="korean">화랑 · 花郞</div>
+        <div class="meaning">Named after the Hwa-Rang youth warriors of the Silla Dynasty (7th century AD). 29 movements = the 29th Infantry Division where ITF Tae Kwon Do was developed.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#8b0000"></div>Red Belt</div>
+        <div><span class="diagram-char">Diagram: I</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Choong-Moo -->
+    <a class="pattern-card" href="storyboards/choong-moo.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#8b0000"></div>
+      <div class="card-top">
+        <span class="gup-badge">1st Gup</span>
+        <div class="move-count">30<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Choong-Moo</h3>
+        <div class="korean">충무 · 忠武</div>
+        <div class="meaning">Named after Admiral Yi Sun-Sin (1545–1598), inventor of the Turtle-ship. Final colour belt pattern — introduces the jumping back kick.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#8b0000"></div>Red Black Tag</div>
+        <div><span class="diagram-char">Diagram: I</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+  </div><!-- /gup-grid -->
+
+  <!-- BLACK BELT FORMS -->
+  <div class="section-head">
+    <span style="background:#1a1a1a;color:var(--gold);font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;font-weight:700;border:1px solid var(--gold)">Black Belt</span>
+    <h2>1st Dan → 3rd Dan</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="gup-grid">
+
+    <!-- Kwang-Gae -->
+    <a class="pattern-card" href="storyboards/kwang-gae.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)"></div>
+      <div class="card-top">
+        <span class="gup-badge" style="border-color:var(--gold);color:var(--gold)">1st Dan</span>
+        <div class="move-count">39<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Kwang-Gae</h3>
+        <div class="korean">광개 · 廣開</div>
+        <div class="meaning">Named after Kwang-Gae-T'o-Wang, the 19th King of the Koguryo Dynasty. 39 movements = the first two figures of 391 AD, the year of his coronation.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a1a1a;border-color:#D4AF37"></div>1st Degree</div>
+        <div><span class="diagram-char">Diagram: +</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Poe-Eun -->
+    <a class="pattern-card" href="storyboards/poe-eun.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)"></div>
+      <div class="card-top">
+        <span class="gup-badge" style="border-color:var(--gold);color:var(--gold)">2nd Dan</span>
+        <div class="move-count">36<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Poe-Eun</h3>
+        <div class="korean">포은 · 圃隱</div>
+        <div class="meaning">Pseudonym of loyal scholar Chong Mong-Chu (1400), whose poem "I would not serve a second master" symbolises the pattern's one-directional line.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a1a1a;border-color:#D4AF37"></div>2nd Degree</div>
+        <div><span class="diagram-char">Diagram: —</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+    <!-- Ge-Baek -->
+    <a class="pattern-card" href="storyboards/ge-baek.html">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold)"></div>
+      <div class="card-top">
+        <span class="gup-badge" style="border-color:var(--gold);color:var(--gold)">3rd Dan</span>
+        <div class="move-count">44<small>moves</small></div>
+      </div>
+      <div class="card-mid">
+        <h3>Ge-Baek</h3>
+        <div class="korean">계백 · 階伯</div>
+        <div class="meaning">Named after General Ge-Baek, a great general of the Baek-Je Dynasty (660 AD). 44 movements reflect the strict military discipline of Ge-Baek.</div>
+      </div>
+      <div class="card-bot">
+        <div class="belt-strip"><div class="belt-dot" style="background:#1a1a1a;border-color:#D4AF37"></div>3rd Degree</div>
+        <div><span class="diagram-char">Diagram: +</span></div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+
+  </div><!-- /gup-grid -->
+
+</div><!-- /gup-section -->
+
+<footer class="page-footer hanji">
+  <div class="footer-logo">Grand Master Scott Craig</div>
+  <p>ITF Tae Kwon Do · 12 Core Forms · Step-by-Step Practice Guide</p>
+  <p style="margin-top:8px;font-size:10px;opacity:.4;letter-spacing:.1em;text-transform:uppercase">Movement sequences based on ITF curriculum — verify against video references</p>
+</footer>
+
+</body>
+</html>

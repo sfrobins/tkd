@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&amp;family=Work+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e2e2e2",
+                    "surface-tint": "#c8c6c5",
+                    "outline-variant": "#444748",
+                    "on-error": "#690005",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "secondary-fixed-dim": "#ffb3b4",
+                    "error-container": "#93000a",
+                    "surface-container": "#1e2020",
+                    "outline": "#8e9192",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface-container-highest": "#333535",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-secondary-fixed": "#40000a",
+                    "secondary-fixed": "#ffdad9",
+                    "on-surface": "#e2e2e2",
+                    "inverse-primary": "#5f5e5e",
+                    "on-primary": "#313030",
+                    "secondary": "#ffb3b4",
+                    "tertiary": "#e9c349",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#848282",
+                    "on-secondary-fixed-variant": "#920023",
+                    "surface": "#121414",
+                    "primary-container": "#1a1a1a",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary-fixed": "#ffe088",
+                    "secondary-container": "#ac012c",
+                    "on-tertiary-container": "#4f3e00",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-secondary-container": "#ffb7b8",
+                    "inverse-on-surface": "#2f3131",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "tertiary-container": "#cca730",
+                    "surface-container-low": "#1a1c1c",
+                    "surface-dim": "#121414",
+                    "on-tertiary": "#3c2f00",
+                    "surface-container-high": "#282a2b",
+                    "surface-bright": "#37393a",
+                    "on-background": "#e2e2e2",
+                    "on-surface-variant": "#c4c7c7",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#474746",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "primary": "#c8c6c5",
+                    "on-secondary": "#680016",
+                    "background": "#121414",
+                    "surface-variant": "#333535"
+            },
+            "fontFamily": {
+                    "body-md": ["Work Sans"],
+                    "label-caps": ["Work Sans"],
+                    "body-lg": ["Work Sans"],
+                    "headline-md": ["Noto Serif"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>.hanji-texture {
+    background-color: #252525;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA6aIglLV5Ie8YcFwB29YaKwLO52i43bT8vbZST1CwRjc8c1ja7n_DUi68xb38HOxGErbabkV6SVkGslUAQp4euimyK0YNcSqWWy_Hri7Mog5cqc8X__mcVaD0PXnjqklUPNenaR40UNI34S4vqxQIofB5_9FcnZ6U2jV5Eugf1J9vuje7qoZ3mBiVpgr4GkIJOVWNTP3_h1jdVM_F1FUyxAaXfFd-WRXE3QizKIEqfopKWAJi1WBM3lw6-7rM_8E4WzOxMoVg8v7jv);
+    background-blend-mode: overlay
+    }
+.calligraphy-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #ac012c 50%, transparent 100%);
+    width: 80%;
+    margin: 1rem auto
+    }
+.vertical-calligraphy {
+    width: 2px;
+    background: linear-gradient(180deg, #D4AF37 0%, #ac012c 50%, transparent 100%)
+    }
+.custom-scrollbar::-webkit-scrollbar {
+    height: 4px
+    }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 10px
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pb-24 selection:bg-secondary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-[#1A1A1A] text-red-600 dark:text-red-500 docked full-width top-0 border-b-2 border-red-700/30 flex justify-between items-center w-full px-6 py-4 fixed z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-2xl cursor-pointer" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-[#D4AF37] dark:text-[#FFD700] tracking-tighter uppercase font-['Noto_Serif']">ITF MASTERY</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#D4AF37] overflow-hidden">
+<img alt="Student Profile Avatar" class="w-full h-full object-cover" data-alt="A focused high-resolution portrait of a martial artist student in a traditional white Dobok, set against a dark, atmospheric background with soft, dramatic rim lighting. The style is cinematic and prestigious, emphasizing discipline and mastery with a color palette of deep blacks and subtle gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ggLqy7QLsQGgcmz62enSyWD6_j9HqNmfI2Wzrj4dLxTU2UtlKb8OuPGN-0BGY4bn3yQ3zVc4TMpIFpqRaf66B_b6PtcVTsE49wr-8rGsPUlbFRb4GHm3WjqSgmCyKNNMVcYr_w6rlcP3Gk1S1KDAI2Y8XaiEAUPk6b80Q3iYC9tovZZOlKgB6NJSjqqdmpXJ1jLGEHlR-MaIjN46pgkYOdjtc-ecHcjnNsdJ8kpyE18soS9qx1DVC4IrnzX1U9itgLAX_sXAoKT6"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-container-max mx-auto">
+<!-- Hero Section: Rank & Mastery -->
+<section class="mb-12 relative">
+<div class="absolute left-0 top-0 h-full vertical-calligraphy opacity-40"></div>
+<div class="pl-8">
+<p class="font-label-caps text-label-caps text-tertiary mb-2">CURRENT RANKING</p>
+<h2 class="font-headline-xl text-headline-xl text-on-surface leading-tight mb-4">Mastery Level: 9th Gup (Chon-Ji)</h2>
+<div class="flex items-center gap-4 text-on-surface-variant font-body-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="history">history</span>
+<span>Last practiced: Chon-Ji (2 hours ago)</span>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Forms Progress -->
+<div class="hanji-texture p-8 rounded-none border-l-4 border-secondary-container shadow-lg flex flex-col justify-between">
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary mb-4">FORMS MASTERED</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-headline-xl text-on-surface">1</span>
+<span class="text-headline-md text-outline">/ 12</span>
+</div>
+</div>
+<div class="mt-6 w-full bg-surface-container h-1 overflow-hidden">
+<div class="bg-secondary-container h-full w-[8.33%] shadow-[0_0_8px_#ac012c]"></div>
+</div>
+</div>
+<!-- Vocabulary Progress -->
+<div class="hanji-texture p-8 rounded-none border-l-4 border-tertiary-container shadow-lg">
+<h3 class="font-label-caps text-label-caps text-tertiary mb-4">VOCABULARY TERMS</h3>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-headline-xl text-on-surface">45</span>
+<span class="text-headline-md text-outline">Learned</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-body-md italic font-serif">"The way of the foot and the fist."</p>
+</div>
+<!-- Next Milestone -->
+<div class="bg-secondary-container p-8 rounded-none border-l-4 border-[#D4AF37] shadow-lg text-white">
+<h3 class="font-label-caps text-label-caps opacity-80 mb-4">NEXT MILESTONE</h3>
+<h4 class="text-headline-lg font-headline-lg mb-2">Dan-Gun</h4>
+<p class="text-body-md mb-6 opacity-90">Unlock 8th Gup requirements by completing pattern practice and terminology exams.</p>
+<button class="w-full py-3 bg-surface text-white border border-[#D4AF37] font-label-caps text-label-caps tracking-[0.2em] hover:bg-surface-bright transition-colors">
+                    VIEW REQUIREMENTS
+                </button>
+</div>
+</div>
+<!-- Badges Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest border-b-2 border-secondary-container pb-2">Earned Badges</h2>
+<span class="text-tertiary font-label-caps text-label-caps cursor-pointer hover:underline">VIEW ALL</span>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-6 custom-scrollbar snap-x">
+<!-- Badge 1 -->
+<div class="flex-shrink-0 w-40 snap-center flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest border-2 border-[#D4AF37] flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+<span class="material-symbols-outlined text-4xl text-[#D4AF37]" data-icon="military_tech" data-weight="fill">military_tech</span>
+</div>
+<p class="font-label-caps text-label-caps text-center">First Step</p>
+</div>
+<!-- Badge 2 -->
+<div class="flex-shrink-0 w-40 snap-center flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest border-2 border-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="menu_book" data-weight="fill">menu_book</span>
+</div>
+<p class="font-label-caps text-label-caps text-center">Vocabulary Pro</p>
+</div>
+<!-- Badge 3 -->
+<div class="flex-shrink-0 w-40 snap-center flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest border-2 border-outline-variant flex items-center justify-center mb-4 grayscale">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<p class="font-label-caps text-label-caps text-outline text-center">Iron Fist</p>
+</div>
+<!-- Badge 4 -->
+<div class="flex-shrink-0 w-40 snap-center flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-highest border-2 border-outline-variant flex items-center justify-center mb-4 grayscale">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="sports_martial_arts">sports_martial_arts</span>
+</div>
+<p class="font-label-caps text-label-caps text-outline text-center">Symmetry</p>
+</div>
+</div>
+</section>
+<!-- Decorative Calligraphy Divider -->
+<div class="calligraphy-divider opacity-30"></div>
+<!-- Recent Activity Feed -->
+<section class="mt-12 mb-20">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Recent Training</h2>
+<div class="space-y-4">
+<div class="hanji-texture p-6 flex items-center gap-6 border-b border-outline-variant/30 group hover:border-secondary transition-colors">
+<div class="text-[#D4AF37] font-headline-md">01</div>
+<div class="flex-grow">
+<h4 class="font-bold text-on-surface">Chon-Ji Pattern Execution</h4>
+<p class="text-on-surface-variant text-body-md">Self-Correction focus on low blocks.</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-secondary">2 HRS AGO</p>
+<p class="text-xs text-outline italic">Session: 45 min</p>
+</div>
+</div>
+<div class="hanji-texture p-6 flex items-center gap-6 border-b border-outline-variant/30 group hover:border-secondary transition-colors">
+<div class="text-[#D4AF37] font-headline-md">02</div>
+<div class="flex-grow">
+<h4 class="font-bold text-on-surface">Korean Terminology Quiz</h4>
+<p class="text-on-surface-variant text-body-md">Achieved 95% accuracy on stance names.</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-secondary">YESTERDAY</p>
+<p class="text-xs text-outline italic">New Terms: 12</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-[#252525] border-t border-[#D4AF37]/20 shadow-2xl h-16">
+<a class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">TIMELINE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">CULTURE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-red-600 bg-black/20 rounded-none border-t-2 border-red-600 pt-2 pb-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">PROFILE</span>
+</a>
+</nav>
+</body></html>

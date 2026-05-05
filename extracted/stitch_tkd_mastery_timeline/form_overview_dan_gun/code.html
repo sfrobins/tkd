@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITF Mastery - Dan-Gun Learning Module</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&amp;family=Work+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e2e2e2",
+                        "surface-tint": "#c8c6c5",
+                        "outline-variant": "#444748",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#ffb3b4",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e2020",
+                        "outline": "#8e9192",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-container-highest": "#333535",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-fixed": "#40000a",
+                        "secondary-fixed": "#ffdad9",
+                        "on-surface": "#e2e2e2",
+                        "inverse-primary": "#5f5e5e",
+                        "on-primary": "#313030",
+                        "secondary": "#ffb3b4",
+                        "tertiary": "#e9c349",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#848282",
+                        "on-secondary-fixed-variant": "#920023",
+                        "surface": "#121414",
+                        "primary-container": "#1a1a1a",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-container": "#ac012c",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-container": "#ffb7b8",
+                        "inverse-on-surface": "#2f3131",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-container": "#cca730",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-dim": "#121414",
+                        "on-tertiary": "#3c2f00",
+                        "surface-container-high": "#282a2b",
+                        "surface-bright": "#37393a",
+                        "on-background": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c7",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary": "#c8c6c5",
+                        "on-secondary": "#680016",
+                        "background": "#121414",
+                        "surface-variant": "#333535"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "label-caps": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                }
+            }
+        }
+    </script>
+<style>.hanji-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBhZMTnGgsdpVB7gXEEVCvGSxDd4KaBEtHgvV6mxwBRj8f7KWUS0mJKZCBvPWzwHvTmHfXrKnz2neKGf0EmrskKpkY0166UX5nCRkIUOMYI_bcOGoR4yeSchFVDx3nEARWBRc2nKq-FNkOOwBdfQ9lDkJAZa8QAbQn3v8fY5iI_nDYjVYbcGTLB8ullN7i-sP6eEwSw5URwc71Z42gVw--EVPXT-fUwElMzac3ah0vir1zJqrkdv9oU7ZvZBuM-FMC59jwtnQRGbuGE);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.calligraphy-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ac012c, transparent);
+    width: 100%;
+    margin: 2rem 0;
+    clip-path: polygon(0 45%, 15% 40%, 50% 0%, 85% 40%, 100% 45%, 85% 50%, 50% 100%, 15% 50%)
+    }
+.vertical-calligraphy {
+    width: 2px;
+    background: linear-gradient(to bottom, #D4AF37, transparent)
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24">
+<!-- Top AppBar -->
+<header class="bg-[#1A1A1A] text-white flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 border-b-2 border-red-700/30">
+<div class="flex items-center gap-4">
+<button class="hover:text-red-500 transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white/70">arrow_back</span>
+</button>
+<h1 class="font-['Noto_Serif'] uppercase tracking-widest text-sm font-bold text-[#D4AF37]">ITF MASTERY</h1>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-container-highest border border-outline overflow-hidden">
+<img alt="Student Profile Avatar" data-alt="A professional close-up portrait of a Taekwondo student in a white dobok, captured with shallow depth of field against a dark, minimalist dojang background. The lighting is dramatic and side-lit, highlighting the texture of the uniform. The overall aesthetic is disciplined, prestigious, and high-contrast black and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRjSKlXcAu2FV9bOteMvn_z4G9p5rOA1en1eDRdFZbUt3Bx_fyQHAbo1vqy6QB3Xe4wOa6MMk8p9EiRJh7iDeYxywL2CtmWud9VrKjiikw_Kokgrha5DQ4kU4DilpKfx3FrXds9mr9t5RQdClDIjrqpt2ry_2vGI6dpR2xYTXkZ3IJz0JsTvuK-VOPyFije0UX557NmrzS8nnRoU-P7Zx2dyYg5eZlF7F7lP4hU62syg8ca7SmkZyEPBEDfO5WShJYB3cktlpSVQ5c"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-4xl mx-auto">
+<!-- Section 1: Hero Header -->
+<section class="relative mb-12">
+<div class="absolute -left-4 top-0 vertical-calligraphy h-full opacity-50"></div>
+<div class="pl-6">
+<p class="font-label-caps text-tertiary mb-2 text-label-caps">8TH GUP • YELLOW BELT</p>
+<h2 class="font-headline-xl text-headline-xl text-on-background tracking-tighter mb-4">DAN-GUN</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Named after the <span class="text-tertiary">holy Dan-Gun</span>, the legendary founder of Korea in the year 2333 B.C. This form introduces high blocks and twin forearm blocks, symbolizing the strength of a nation's origin.
+                </p>
+</div>
+</section>
+<!-- Section 2: High-Level Stats (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+<div class="bg-[#252525] p-6 relative overflow-hidden border-l-4 border-secondary-container">
+<div class="hanji-overlay absolute inset-0"></div>
+<p class="font-label-caps text-on-primary-container text-label-caps mb-1">MOVEMENTS</p>
+<p class="font-headline-lg text-headline-lg text-on-surface">21</p>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-white/5 opacity-20 text-6xl">footprint</span>
+</div>
+<div class="bg-[#252525] p-6 relative overflow-hidden border-l-4 border-tertiary">
+<div class="hanji-overlay absolute inset-0"></div>
+<p class="font-label-caps text-on-primary-container text-label-caps mb-1">RANK</p>
+<p class="font-headline-lg text-headline-lg text-tertiary">Yellow Belt</p>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-white/5 opacity-20 text-6xl">workspace_premium</span>
+</div>
+<div class="bg-[#252525] p-6 relative overflow-hidden border-l-4 border-outline">
+<div class="hanji-overlay absolute inset-0"></div>
+<p class="font-label-caps text-on-primary-container text-label-caps mb-1">DIAGRAM</p>
+<p class="font-headline-lg text-headline-lg text-on-surface">Capital I</p>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-white/5 opacity-20 text-6xl">account_tree</span>
+</div>
+</section>
+<div class="calligraphy-divider"></div>
+<!-- Section 3: Performance Criteria -->
+<section class="mb-12">
+<h3 class="font-headline-md text-headline-md mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">verified</span>
+                PERFORMANCE CRITERIA
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-[#252525] p-6 border border-outline-variant/30 relative">
+<div class="hanji-overlay absolute inset-0"></div>
+<h4 class="font-label-caps text-tertiary mb-3 text-label-caps">STANCES &amp; SHAPE</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="text-secondary-container mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary-container shrink-0"></span>
+                            Consistent Niunja Sogi (L-Stance) width and weight distribution.
+                        </li>
+<li class="flex items-start gap-2">
+<span class="text-secondary-container mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary-container shrink-0"></span>
+                            Sharp transitions into Gunnun Sogi (Walking Stance).
+                        </li>
+</ul>
+</div>
+<div class="bg-[#252525] p-6 border border-outline-variant/30 relative">
+<div class="hanji-overlay absolute inset-0"></div>
+<h4 class="font-label-caps text-tertiary mb-3 text-label-caps">POWER &amp; TIMING</h4>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="text-secondary-container mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary-container shrink-0"></span>
+                            Utilization of the sine wave for high-section blocks.
+                        </li>
+<li class="flex items-start gap-2">
+<span class="text-secondary-container mt-1.5 h-1.5 w-1.5 rounded-full bg-secondary-container shrink-0"></span>
+                            Correct tension at the moment of impact for punches.
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 4: The Legend of Dan-Gun -->
+<section class="mb-12 flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2">
+<h3 class="font-headline-md text-headline-md mb-4">THE LEGEND OF DAN-GUN</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+                    History tells of a heavenly prince, Hwan-ung, who descended to Earth. He transformed a bear into a woman who gave birth to Dan-Gun Wanggeom. Dan-Gun founded Gojoseon, the first Korean kingdom, establishing a legacy of discipline and wisdom that survives in every movement of this Tul.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant italic border-l-2 border-secondary-container pl-4">
+                    "To learn Dan-Gun is to understand the foundation of the spirit."
+                </p>
+</div>
+<div class="w-full md:w-1/2 group overflow-hidden">
+<img alt="Calligraphic landscape of Ancient Korea" class="w-full aspect-square object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A majestic and atmospheric digital painting of ancient Korean architecture and mountain peaks shrouded in morning mist. The style is inspired by traditional ink wash calligraphy, featuring bold black strokes and subtle gold highlights. The lighting is ethereal, suggesting a sunrise at the dawn of a civilization, with a palette of deep charcoal, parchment white, and crimson red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVx_3NBhTZch967EnXf5tNK_8NJv_i-2LGx1beu8CEDWxHvMlD-u5-JaiuSAB_bI-FYGy1k1aOf2ECOKtGDM8C5qg6fiqf7WnLLWxb4C3n5ez44QGE2IZ5fPHh8UDhU348sLdVnBMY7xycikHAflam15W2swqeybEaQ79cNRP7T362i8PcApkpoeXzpSE90Or97NitIeEdXCrrcmoLN-qORm6hgm6E25kCLAkw1JjFe3-UY65dl68wAchVUpagReWoizuJwRndJ2NZ"/>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="flex flex-col sm:flex-row gap-4 mb-24">
+<button class="flex-1 bg-secondary-container text-white font-label-caps py-4 tracking-widest flex items-center justify-center gap-2 border border-[#D4AF37]/40 hover:bg-[#8e0124] transition-colors group">
+<span class="material-symbols-outlined" data-weight="fill">play_arrow</span>
+                WATCH DEMONSTRATION
+            </button>
+<button class="flex-1 bg-transparent border border-white text-white font-label-caps py-4 tracking-widest flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">fitness_center</span>
+                PRACTICE MODE
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-[#252525] border-t border-[#D4AF37]/20 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 font-['Noto_Serif'] text-[10px] font-bold tracking-widest hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+            HOME
+        </div>
+<div class="flex flex-col items-center justify-center text-red-600 bg-black/20 rounded-none border-t-2 border-red-600 pt-2 pb-1 font-['Noto_Serif'] text-[10px] font-bold tracking-widest opacity-80 cursor-pointer">
+<span class="material-symbols-outlined">account_tree</span>
+            TIMELINE
+        </div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 font-['Noto_Serif'] text-[10px] font-bold tracking-widest hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">auto_stories</span>
+            CULTURE
+        </div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 font-['Noto_Serif'] text-[10px] font-bold tracking-widest hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined">person</span>
+            PROFILE
+        </div>
+</nav>
+</body></html>

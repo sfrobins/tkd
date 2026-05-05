@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Do-San Tul — Storyboard | Grand Master Scott Craig</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../storyboard-base.css"/>
+</head><body>
+<script>
+window.PATTERN = {
+  name:'Do-San', korean:'도산', hanja:'島山', meaning:'Patriot Ahn Chang-Ho',
+  gup:'7th Gup', beltColor:'#1a7a1a', beltName:'Green Tag',
+  moves:24, diagram:'I_SHAPE', diagramHanja:'I', diagramMeaning:'Straight Line — Upright Resolve',
+  youtube: null,
+  bio:'Do-San is the pseudonym of the patriot Ahn Chang-Ho (1876–1938) who devoted his entire life to furthering the education of Korea and its independence movement. The 24 movements represent his entire life which he dedicated to Korea\'s education and independence movement. This pattern introduces inner forearm blocks, knife hand guarding blocks, and front snap kicks.',
+  movements:[
+    // SECTION A — Opening Lateral (Inner Forearm Blocks)
+    {id:1,sec:'A',secName:'Inner Forearm Block Opening',dir:'D',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Inner Forearm Middle Block',techKr:'왼 안팔목 중단막기',fig:'inner-block-left',note:null,desc:'Move left foot to D. Left walking stance toward D. Left inner forearm middle block.'},
+    {id:2,sec:'A',secName:'Inner Forearm Block Opening',dir:'D',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Middle Obverse Punch',techKr:'오른 중단 바로지르기',fig:'punch-right',note:null,desc:'Step right foot forward. Right walking stance D. Right middle obverse punch.'},
+    {id:3,sec:'A',secName:'Inner Forearm Block Opening',dir:'C',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Inner Forearm Middle Block',techKr:'오른 안팔목 중단막기',fig:'inner-block-right',note:null,desc:'Pivot 180°. Right walking stance toward C. Right inner forearm middle block.'},
+    {id:4,sec:'A',secName:'Inner Forearm Block Opening',dir:'C',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Middle Obverse Punch',techKr:'왼 중단 바로지르기',fig:'punch-left',note:null,desc:'Step left foot forward. Left walking stance C. Left middle obverse punch.'},
+    // SECTION B — Forward Advance with Kicks
+    {id:5,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Inner Forearm Middle Block',techKr:'왼 안팔목 중단막기',fig:'inner-block-left',note:null,desc:'Pivot 90° left. Left walking stance toward B. Left inner forearm middle block.'},
+    {id:6,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Middle Obverse Punch',techKr:'오른 중단 바로지르기',fig:'punch-right',note:null,desc:'Step right foot. Right walking stance B. Right middle obverse punch.'},
+    {id:7,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Front Snap Kick → Left Middle Punch',techKr:'왼 앞차기 → 왼 지르기',fig:'front-kick-left',note:null,desc:'Execute left front snap kick. Land in left walking stance B. Left middle obverse punch.'},
+    {id:8,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Front Snap Kick → Right Middle Punch',techKr:'오른 앞차기 → 오른 지르기',fig:'front-kick-right',note:null,desc:'Execute right front snap kick. Land in right walking stance B. Right middle obverse punch.'},
+    {id:9,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Inner Forearm Middle Block',techKr:'왼 안팔목 중단막기',fig:'inner-block-left',note:null,desc:'Step left foot forward. Left walking stance B. Left inner forearm middle block.'},
+    {id:10,sec:'B',secName:'Forward Advance — Blocks, Kicks & Punches',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Middle Obverse Punch',techKr:'오른 중단 바로지르기',fig:'punch-right',note:null,desc:'Step right foot forward. Right walking stance B. Right middle obverse punch.'},
+    // SECTION C — Knife Hand Guarding Blocks (Diagonal turns)
+    {id:11,sec:'C',secName:'Knife Hand Guarding — Side Arms',dir:'EF',stance:'Left L-Stance',stanceKr:'왼 뒷굽이',tech:'Right Knife Hand Guarding Block',techKr:'오른 손날 대비막기',fig:'knife-hand-right',note:null,desc:'Pivot left 90°. Left L-stance toward EF direction. Right knife hand guarding block.'},
+    {id:12,sec:'C',secName:'Knife Hand Guarding — Side Arms',dir:'EF',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Middle Obverse Punch',techKr:'오른 중단 바로지르기',fig:'punch-right',note:null,desc:'Step right foot forward. Right walking stance EF. Right middle obverse punch.'},
+    {id:13,sec:'C',secName:'Knife Hand Guarding — Side Arms',dir:'GH',stance:'Right L-Stance',stanceKr:'오른 뒷굽이',tech:'Left Knife Hand Guarding Block',techKr:'왼 손날 대비막기',fig:'knife-hand-left',note:null,desc:'Pivot right 180°. Right L-stance toward GH. Left knife hand guarding block.'},
+    {id:14,sec:'C',secName:'Knife Hand Guarding — Side Arms',dir:'GH',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Middle Obverse Punch',techKr:'왼 중단 바로지르기',fig:'punch-left',note:null,desc:'Step left foot forward. Left walking stance GH. Left middle obverse punch.'},
+    // SECTION D — Return and High Blocks
+    {id:15,sec:'D',secName:'High Blocks — Return Advance',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left High Block',techKr:'왼 높이막기',fig:'high-block-left',note:null,desc:'Pivot left 90°. Left walking stance toward B. Left high section block.'},
+    {id:16,sec:'D',secName:'High Blocks — Return Advance',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right High Block',techKr:'오른 높이막기',fig:'high-block-right',note:null,desc:'Step right foot. Right walking stance B. Right high section block.'},
+    {id:17,sec:'D',secName:'High Blocks — Return Advance',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Front Snap Kick → Left High Punch',techKr:'왼 앞차기 → 왼 높이지르기',fig:'front-kick-left',note:null,desc:'Execute left front snap kick. Land in left walking stance B. Left high obverse punch.'},
+    {id:18,sec:'D',secName:'High Blocks — Return Advance',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Front Snap Kick → Right High Punch',techKr:'오른 앞차기 → 오른 높이지르기',fig:'front-kick-right',note:null,desc:'Execute right front snap kick. Land in right walking stance B. Right high obverse punch.'},
+    // SECTION E — Low Block Return and Close
+    {id:19,sec:'E',secName:'Low Block Closing',dir:'A',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right Low Section Block',techKr:'오른 아래막기',fig:'low-block-right',note:null,desc:'Pivot 180°. Right walking stance toward A. Right low section block.'},
+    {id:20,sec:'E',secName:'Low Block Closing',dir:'A',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left Middle Obverse Punch',techKr:'왼 중단 바로지르기',fig:'punch-left',note:null,desc:'Step left foot forward. Left walking stance A. Left middle obverse punch.'},
+    {id:21,sec:'E',secName:'Low Block Closing',dir:'D',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left High Block',techKr:'왼 높이막기',fig:'high-block-left',note:null,desc:'Pivot 90° right. Left walking stance D. Left high block.'},
+    {id:22,sec:'E',secName:'Low Block Closing',dir:'C',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right High Block',techKr:'오른 높이막기',fig:'high-block-right',note:null,desc:'Pivot 180°. Right walking stance C. Right high block.'},
+    {id:23,sec:'E',secName:'Low Block Closing',dir:'B',stance:'Left Walking Stance',stanceKr:'왼 보행 서기',tech:'Left High Block',techKr:'왼 높이막기',fig:'high-block-left',note:null,desc:'Pivot 90° left. Left walking stance B. Left high block.'},
+    {id:24,sec:'E',secName:'Low Block Closing',dir:'B',stance:'Right Walking Stance',stanceKr:'오른 보행 서기',tech:'Right High Block',techKr:'오른 높이막기',fig:'high-block-right',note:'END',desc:'Step right foot forward. Right walking stance B. Right high block. Return to ready.'},
+  ]
+};
+</script>
+<script src="../storyboard-engine.js"></script>
+</body></html>

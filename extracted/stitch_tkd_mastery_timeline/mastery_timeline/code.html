@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITF Mastery Timeline</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&amp;family=Work+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e2e2e2",
+                        "surface-tint": "#c8c6c5",
+                        "outline-variant": "#444748",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#ffb3b4",
+                        "error-container": "#93000a",
+                        "surface-container": "#1e2020",
+                        "outline": "#8e9192",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-container-highest": "#333535",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-secondary-fixed": "#40000a",
+                        "secondary-fixed": "#ffdad9",
+                        "on-surface": "#e2e2e2",
+                        "inverse-primary": "#5f5e5e",
+                        "on-primary": "#313030",
+                        "secondary": "#ffb3b4",
+                        "tertiary": "#e9c349",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#848282",
+                        "on-secondary-fixed-variant": "#920023",
+                        "surface": "#121414",
+                        "primary-container": "#1a1a1a",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-container": "#ac012c",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-secondary-container": "#ffb7b8",
+                        "inverse-on-surface": "#2f3131",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "tertiary-container": "#cca730",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-dim": "#121414",
+                        "on-tertiary": "#3c2f00",
+                        "surface-container-high": "#282a2b",
+                        "surface-bright": "#37393a",
+                        "on-background": "#e2e2e2",
+                        "on-surface-variant": "#c4c7c7",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary": "#c8c6c5",
+                        "on-secondary": "#680016",
+                        "background": "#121414",
+                        "surface-variant": "#333535"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "margin": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Work Sans"],
+                        "label-caps": ["Work Sans"],
+                        "body-lg": ["Work Sans"],
+                        "headline-md": ["Noto Serif"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .hanji-texture {
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .calligraphy-stroke {
+            background: linear-gradient(to bottom, transparent, #D4AF37 15%, #D4AF37 85%, transparent);
+            width: 2px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        .brush-border {
+            border-image: linear-gradient(to right, transparent, #ac012c, transparent) 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen selection:bg-secondary-container/30">
+<!-- TopAppBar -->
+<header class="bg-[#1A1A1A] text-white/70 font-['Noto_Serif'] uppercase tracking-widest text-sm font-bold docked full-width top-0 border-b-2 border-red-700/30 flat no shadows flex justify-between items-center w-full px-6 py-4 sticky z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-red-600 dark:text-red-500 cursor-pointer hover:text-red-500 transition-colors active:scale-95 transition-transform" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-[#D4AF37] dark:text-[#FFD700] tracking-tighter">ITF MASTERY</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-[#D4AF37]/50">
+<img alt="Student Profile Avatar" class="w-full h-full object-cover" data-alt="A professional, high-contrast studio portrait of a Martial Arts practitioner in a clean white Dobok against a dark, textured background. The lighting is dramatic and moody, emphasizing discipline and focus. The aesthetic is clean and prestigious, with subtle grain reminiscent of traditional Hanji paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGSN0BrNvIqIXOKAoEGK1v-GAUdrZ88vwJXzdc-vXQC17v8K5KjQ0jco5R5BscyIzSe8J1UrozLp-M3Eshk2G5hmsnZQ7AJtuOY7kvkKfgt6YU6AETTKXnDsJq-04yZwGZWVTv5lgyvhvNS3F4D_xZkiAVHDHbjbVHmV2ElXuuMGOvN5uOX-GbjbSboSAHvqa30qaxJ3POiS3sQrBrimTKpQNZOSLTChEBq3m6jOV1xBuIcx_DFHtTb6sXf49nR7kyAhHqKX0aoUIE"/>
+</div>
+</div>
+</header>
+<main class="hanji-texture min-h-screen pb-32">
+<!-- Progress Overview -->
+<section class="max-w-container-max mx-auto px-gutter pt-margin mb-12">
+<div class="bg-surface-container p-8 border-l-4 border-secondary-container">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="font-label-caps text-tertiary-container block mb-2">CURRENT STANDING</span>
+<h2 class="font-headline-lg text-on-surface">Path of the Indomitable</h2>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-secondary">15%</span>
+<span class="font-label-caps text-on-surface-variant block">COMPLETE</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="h-1 bg-surface-container-highest w-full relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full bg-secondary-container shadow-[0_0_10px_rgba(172,1,44,0.5)] w-[15%]"></div>
+</div>
+</div>
+</section>
+<!-- Timeline Container -->
+<section class="max-w-4xl mx-auto px-gutter relative flex">
+<!-- The Calligraphic Axis -->
+<div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 calligraphy-stroke opacity-50"></div>
+<div class="w-full space-y-24 py-12">
+<!-- Node 1: Current -->
+<div class="relative flex items-center justify-center w-full">
+<div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest border-4 border-tertiary shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center z-10 relative">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="settings_suggest" data-weight="fill" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
+</div>
+</div>
+<div class="grid grid-cols-2 w-full gap-24">
+<div class="text-right flex flex-col justify-center">
+<span class="font-label-caps text-on-surface-variant">WHITE BELT</span>
+<h3 class="font-headline-md text-on-surface">Chon-Ji</h3>
+</div>
+<div class="text-left flex flex-col justify-center">
+<div class="bg-surface-container-low p-4 border-l-2 border-tertiary">
+<p class="text-sm font-label-caps text-on-surface-variant mb-1">9TH GUP</p>
+<p class="text-sm text-on-surface">19 Movements</p>
+<span class="inline-block mt-2 text-xs font-bold text-tertiary tracking-widest">CURRENT FOCUS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Node 2: Locked -->
+<div class="relative flex items-center justify-center w-full opacity-60">
+<div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container border-2 border-surface-variant flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-outline text-2xl" data-icon="lock">lock</span>
+</div>
+</div>
+<div class="grid grid-cols-2 w-full gap-24">
+<div class="text-right flex flex-col justify-center">
+<span class="font-label-caps text-on-surface-variant">YELLOW BELT</span>
+<h3 class="font-headline-md text-outline">Dan-Gun</h3>
+</div>
+<div class="text-left flex flex-col justify-center">
+<div class="p-4">
+<p class="text-sm font-label-caps text-outline-variant mb-1">8TH GUP</p>
+<p class="text-sm text-outline-variant">21 Movements</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Node 3: Locked -->
+<div class="relative flex items-center justify-center w-full opacity-50">
+<div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-surface-container border-2 border-surface-variant flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-outline text-2xl" data-icon="lock">lock</span>
+</div>
+</div>
+<div class="grid grid-cols-2 w-full gap-24">
+<div class="text-right flex flex-col justify-center order-2 text-left">
+<span class="font-label-caps text-on-surface-variant">YELLOW BELT</span>
+<h3 class="font-headline-md text-outline">Do-San</h3>
+</div>
+<div class="text-right flex flex-col justify-center order-1">
+<div class="p-4">
+<p class="text-sm font-label-caps text-outline-variant mb-1">7TH GUP</p>
+<p class="text-sm text-outline-variant">24 Movements</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorator: Tapered Line Break -->
+<div class="relative py-8">
+<div class="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-secondary-container to-transparent opacity-30"></div>
+</div>
+<!-- Node 12: Goal -->
+<div class="relative flex items-center justify-center w-full mt-32">
+<div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-highest border-4 border-secondary-container flex items-center justify-center z-10 shadow-[0_0_30px_rgba(172,1,44,0.3)]">
+<span class="material-symbols-outlined text-on-background text-5xl" data-icon="military_tech">military_tech</span>
+</div>
+</div>
+<div class="grid grid-cols-2 w-full gap-24">
+<div class="text-right flex flex-col justify-center">
+<span class="font-label-caps text-secondary">3RD DAN BLACK BELT</span>
+<h3 class="font-headline-md text-on-surface">Ge-Baek</h3>
+</div>
+<div class="text-left flex flex-col justify-center">
+<div class="bg-surface-container-low p-6 border-r-4 border-secondary-container max-w-xs">
+<p class="font-body-md text-on-surface-variant italic">"Named after the great general Ge-Baek of the Baek-Je Dynasty (660 AD)."</p>
+<p class="text-sm font-label-caps text-secondary mt-4">44 MOVEMENTS</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Texture Elements -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[-1]">
+<img alt="Pattern Decor" class="w-full h-full object-cover" data-alt="Faint, semi-transparent traditional Korean geometric patterns and ink wash strokes overlaid on a dark, textured Hanji paper background. The patterns are elegant and subtle, evoking a sense of ancient history and discipline. The lighting is non-existent, letting the textures speak through deep values and minimal contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL8nhdu4rzDxb2GZMd_wq3O87cFLTOWone47o0dg5jQCPfM3i_3wcSgeR1vfr9kFf3cA7uN4NDLhVZcyARB5xNuuoveywNtEatTQ7-Oj5WlaZb1f6eRNjb8pltToPDWFgxh8iuj5rPwReX2SQyTjxbv-fqUkQX1CizuK_FQslsBjXbzvNigdfVZULvkZODPKFzgCL0JXGUPzwZjxtMJx7huIKb0t3AIvd4LVYkcRDyhQcRWkR1wOpwpbS9D1dHkrjnu3w6NKtYh9oK"/>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#252525] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe border-t border-[#D4AF37]/20 shadow-2xl h-20">
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">HOME</span>
+</div>
+<div class="flex flex-col items-center justify-center text-red-600 bg-black/20 rounded-none border-t-2 border-red-600 pt-2 pb-1 active:opacity-80 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">TIMELINE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">CULTURE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest mt-1">PROFILE</span>
+</div>
+</nav>
+</body></html>

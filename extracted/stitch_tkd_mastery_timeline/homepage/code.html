@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ITF MASTERY - Journey to Mastery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&amp;family=Work+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#e2e2e2",
+                      "surface-tint": "#c8c6c5",
+                      "outline-variant": "#444748",
+                      "on-error": "#690005",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "secondary-fixed-dim": "#ffb3b4",
+                      "error-container": "#93000a",
+                      "surface-container": "#1e2020",
+                      "outline": "#8e9192",
+                      "surface-container-lowest": "#0c0f0f",
+                      "surface-container-highest": "#333535",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-secondary-fixed": "#40000a",
+                      "secondary-fixed": "#ffdad9",
+                      "on-surface": "#e2e2e2",
+                      "inverse-primary": "#5f5e5e",
+                      "on-primary": "#313030",
+                      "secondary": "#ffb3b4",
+                      "tertiary": "#e9c349",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-container": "#848282",
+                      "on-secondary-fixed-variant": "#920023",
+                      "surface": "#121414",
+                      "primary-container": "#1a1a1a",
+                      "primary-fixed": "#e5e2e1",
+                      "tertiary-fixed": "#ffe088",
+                      "secondary-container": "#ac012c",
+                      "on-tertiary-container": "#4f3e00",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-secondary-container": "#ffb7b8",
+                      "inverse-on-surface": "#2f3131",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "tertiary-container": "#cca730",
+                      "surface-container-low": "#1a1c1c",
+                      "surface-dim": "#121414",
+                      "on-tertiary": "#3c2f00",
+                      "surface-container-high": "#282a2b",
+                      "surface-bright": "#37393a",
+                      "on-background": "#e2e2e2",
+                      "on-surface-variant": "#c4c7c7",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#474746",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "primary": "#c8c6c5",
+                      "on-secondary": "#680016",
+                      "background": "#121414",
+                      "surface-variant": "#333535"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1200px",
+                      "gutter": "24px",
+                      "margin": "48px"
+              },
+              "fontFamily": {
+                      "body-md": ["Work Sans"],
+                      "label-caps": ["Work Sans"],
+                      "body-lg": ["Work Sans"],
+                      "headline-md": ["Noto Serif"],
+                      "headline-xl": ["Noto Serif"],
+                      "headline-lg": ["Noto Serif"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>.hanji-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAqHV1TDznUnohPvv14k8kTlIdOY2Exv38PnkenCQNMQzw0WkwmHiTZtTi29Wrt5r0xd6zDnZEaI8bt7IoBuCUaB4Y_i0kcJpn1qvHQqF9FT7_F5o8cmOx9kPbIJvkx6qoYRvgORZH1SNhKjh6yyDUYW5TyUW5r2p5hFvMkmahhEexm5u82tEsnjeHcQ9NxpgkItb5UcBQurp2vduV9tZuDZj8y0hEuC8yWEzpUs_1KeNjA9KwLMrSFJEjNAfUg_4lTQ4JtcdtIwlFG);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.calligraphic-line {
+    background: linear-gradient(to bottom, transparent, #ac012c 20%, #ac012c 80%, transparent);
+    width: 2px
+    }
+.calligraphic-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37 50%, transparent);
+    width: 100%
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-[60] w-full flex justify-between items-center px-6 py-4 bg-[#1A1A1A] border-b-2 border-red-700/30">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-red-600 cursor-pointer">menu</span>
+<span class="text-xl font-black text-[#D4AF37] tracking-tighter uppercase font-['Noto_Serif']">ITF MASTERY</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-['Noto_Serif'] uppercase tracking-widest text-sm font-bold text-[#D4AF37]">HOME</span>
+<div class="w-10 h-10 rounded-full border border-[#D4AF37]/50 overflow-hidden bg-surface-container">
+<img alt="Student Profile Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a focused martial artist in a black belt dobok, lit with dramatic cinematic side-lighting against a deep charcoal background. The image has a professional, high-contrast aesthetic with sharp details in the fabric texture and a disciplined, serene facial expression. The overall mood is prestigious and traditional yet modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsziXCzFZVEw6AXx50eepUajKWjvJkQLTHC4ycCVmJ4Ld1YaKHAd3U-xnnL35LI796Om1vKKP9uZDLInVO4P1XxKA1pXbJuuiJHTM75BiTTxXQ-tFswgrrdRX_fzHgz7ARZxZPI1bGJXHvxQwHx7B-tVupLIwtzwote7Pp_AdVV94Q580BlUOYvcmJ2WQLHrY9lyMVi4ekkMFQXxf3Az8MdNspuNGJj9Ym36oAZZYy4W5TeCCtCuujo0x32VfX-skSvx0ffAHa5rDg"/>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center pt-16">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A powerful, full-body portrait of Grand Master Scott Craig performing a precise side kick in a traditional white ITF dobok with black trim. The setting is a minimalist, dimly lit traditional dojang with polished dark wood floors. Glowing gold particles float in the air, caught in a single dramatic spotlight from above. The composition is epic and disciplined, emphasizing strength and perfect technique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNY1f892plt90YhTFicCpC5iTZLEGi1nm4YbAYf1hU6Rex20pXk2N7HHC5Mh42GLRgN4SD4AWfLRWMYz2LZy1Dfk9KJIGjrClzK7ah9fJ2EYTioL7saSmVdeDnxyRlbzJ7lSpa0iG-ANY5c67tlsYKqE0nJwcsbOc9mCsdp8Ym-MEB5ld5sHBFUURTMP9ceDFWrnfFyki_iUkp_5v4crS1KD63Gj3OcZORYse4zUQ0XufS8IAzsMgBAawpVgO0EgdGTCyodxhDB7vT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="hanji-overlay absolute inset-0"></div>
+</div>
+<div class="relative z-10 text-center px-gutter max-w-4xl">
+<h1 class="font-headline-xl text-on-background mb-unit uppercase tracking-tighter">
+                JOURNEY TO <span class="text-tertiary">MASTERY</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant mb-margin max-w-2xl mx-auto italic">
+                “The way is in the heart, the technique is in the body, the spirit is in the indomitable will.”
+            </p>
+<button class="bg-secondary-container text-white font-label-caps px-10 py-5 rounded-none border border-[#D4AF37] shadow-[0_0_20px_rgba(172,1,44,0.3)] hover:scale-105 transition-transform active:scale-95">
+                BEGIN YOUR TIMELINE
+            </button>
+</div>
+</section>
+<!-- Teaser Section: 12 Core ITF Forms -->
+<section class="relative py-margin bg-surface-container overflow-hidden">
+<div class="hanji-overlay absolute inset-0"></div>
+<div class="container mx-auto px-gutter relative z-10">
+<div class="flex flex-col items-center mb-margin">
+<h2 class="font-headline-lg text-tertiary uppercase tracking-widest text-center mb-4">The 12 Core ITF Forms</h2>
+<div class="calligraphic-divider"></div>
+</div>
+<!-- Scrollable Timeline Preview -->
+<div class="flex gap-gutter overflow-x-auto pb-gutter snap-x no-scrollbar">
+<!-- Node 1 -->
+<div class="min-w-[280px] snap-center bg-primary-container p-6 border-l-4 border-secondary-container group hover:bg-surface-container-high transition-colors">
+<span class="font-label-caps text-tertiary mb-2 block">10TH GEUP</span>
+<h3 class="font-headline-md text-on-background mb-4">CHON-JI</h3>
+<div class="aspect-[4/5] bg-background mb-4 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A stylized technical diagram of the Chon-Ji Tul movement pattern, rendered in elegant white brushstrokes over a textured black Hanji paper background. Subtle gold annotations mark the sequence of strikes. The aesthetic is clean, technical, and reminiscent of high-end architectural blueprints but with an organic, calligraphic feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJYQDrbM6j7duGDp4ClX6CjuJsvdLkseP9uJ27JRkCkpz9ttKNjZdTf-llHL32OOZncwHgYaOUBg4CMlxx1GwgOuZpJQMo08t8R1bRa-TIxH19ML5S-aETcjzkB-qDS-ptBvP1iw_PMH14tMuqL2vn8gFAy8wbSZWTPM3RP2kYyAYk4Oyiebee41zjKIbUbwyOn7tkRTdZtLmQNW9UkcR3KjD-PHbzi5YhVEDIPi_irDjS-2MJEoYbemIviEo4jFx47BtTLIE6wzuu"/>
+</div>
+<p class="text-body-md text-on-surface-variant line-clamp-2">The 'Heaven and Earth' represents the creation of the world and the beginning of human history.</p>
+</div>
+<!-- Node 2 -->
+<div class="min-w-[280px] snap-center bg-primary-container p-6 border-l-4 border-secondary-container/50 group hover:bg-surface-container-high transition-colors">
+<span class="font-label-caps text-on-surface-variant mb-2 block">9TH GEUP</span>
+<h3 class="font-headline-md text-on-background mb-4">DAN-GUN</h3>
+<div class="aspect-[4/5] bg-background mb-4 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="A martial artist captured in mid-motion of a high block from the Dan-Gun Tul. The background is a minimalist black space with a faint gold circular motif. The lighting is high-contrast, casting deep shadows that emphasize the sharp lines of the dobok and the disciplined posture. The image is filtered with a subtle paper grain texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBuT3fDTlml5lxah4EvtwMYNlCbYBQbHSDYFsgSh3dORudus7ulR8-zJZiRpVz2RUxR2ukuZZLT1LsUJLbpcgl1L7Q7lu9-NcRq0AJ-ibFTPXFsxMMSDubb0VldaWkHg461nMxdJ4aFQx1CQ4CNCHQEO1OaGVCscFTwn147gU12PCNs-tCrO10qPR_WWAIJt0ZyD6fFOd4V_7nEztpARnFAomaOek4je5EPvXabRmPgzwaTS3t-DLqbdzR01kundvBAoFesYSlUpz7"/>
+</div>
+<p class="text-body-md text-on-surface-variant line-clamp-2">Named after the holy Dan-Gun, the legendary founder of Korea in the year 2333 B.C.</p>
+</div>
+<!-- Node 3 -->
+<div class="min-w-[280px] snap-center bg-primary-container p-6 border-l-4 border-secondary-container/30 group hover:bg-surface-container-high transition-colors">
+<span class="font-label-caps text-on-surface-variant mb-2 block">8TH GEUP</span>
+<h3 class="font-headline-md text-on-background mb-4">DO-SAN</h3>
+<div class="aspect-[4/5] bg-background mb-4 overflow-hidden">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" data-alt="An artistic representation of a spear-finger strike from the Do-San Tul. The focus is on the hand and forearm, with the rest of the figure softly blurred. The background features a vertical calligraphic brush stroke in faded red. The lighting is dramatic and moody, highlighting the precision and tension in the strike." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYnpxZVcZyFUlj4Q4wfFKz-5xvugc567TPVCbaC6TWSTarK81hQ961hjtF6_ldVgExODNlu5BhVujNRmr-bzXiY4iclfQaM7RYbImUDKnTdyLQ7mFtiEr09OjKu51IsR0B3fw6YKrN8n_UNslqXxdPsp6e-gNSEsx7gaVRTEOMRdk3EQ0YPrGEZOG8KRQJiRIlK_y9gpc9OviXRwR0uqmJhVO2Ke5xKDJ2m_kh9PoksYxDLHfPQeS5W60gtZa9zxUR929P8iDy0JbS"/>
+</div>
+<p class="text-body-md text-on-surface-variant line-clamp-2">Named after the patriot Ahn Chang-Ho who devoted his life to furthering the education of Korea.</p>
+</div>
+<!-- More nodes hidden/scrolled -->
+</div>
+</div>
+</section>
+<!-- Welcome Message Section -->
+<section class="py-margin px-gutter max-w-container-max mx-auto grid md:grid-cols-2 gap-margin items-center">
+<div class="relative">
+<div class="absolute -left-4 top-0 bottom-0 calligraphic-line"></div>
+<div class="pl-gutter">
+<h2 class="font-headline-lg text-on-background mb-unit uppercase">Tradition Meets Technology</h2>
+<p class="text-body-lg text-on-surface-variant mb-6">
+                    The International Tae Kwon Do Federation (ITF) represents the original spirit of the "Do". It is a discipline of movement, morality, and strength.
+                </p>
+<p class="text-body-md text-on-surface-variant mb-margin">
+                    Our mission is to provide a digital sanctuary for practitioners. We bridge the gap between ancient lineage and modern mastery, offering a structured, interactive timeline that tracks your evolution from a white belt's 'Chon-Ji' to the profound depths of the black belt 'Tong-Il'.
+                </p>
+<div class="flex gap-4">
+<div class="text-center p-4 bg-surface-container-high border border-outline/20">
+<span class="block font-headline-md text-tertiary">24</span>
+<span class="font-label-caps text-[10px]">TULS</span>
+</div>
+<div class="text-center p-4 bg-surface-container-high border border-outline/20">
+<span class="block font-headline-md text-tertiary">5</span>
+<span class="font-label-caps text-[10px]">TENETS</span>
+</div>
+<div class="text-center p-4 bg-surface-container-high border border-outline/20">
+<span class="block font-headline-md text-tertiary">1</span>
+<span class="font-label-caps text-[10px]">DO</span>
+</div>
+</div>
+</div>
+</div>
+<div class="aspect-square bg-surface-container relative p-2 border border-tertiary/20">
+<img class="w-full h-full object-cover" data-alt="An ultra-minimalist, wide-angle shot of a traditional Korean palace gateway under a twilight sky. The architecture is sharp and black against a dark navy and gold horizon. The ground is a mirror-like surface reflecting the structures. The mood is silent, meditative, and deeply rooted in history, serving as a metaphor for the foundations of Tae Kwon Do." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA44HoUQoTYzWFiWmBDxh5faNJhQCqzME_cHs5w57gErnIHiOIR9_lGMUypYt0eJbsUxptKCYuWv4Tp5_w3MFfv21azOTZVK73SIJVOd-ABZznWXD8809FWWyHBCbXT9GVL9e5o3zKiOFwT-KWu0iClyeTDiQDjX1vnSDJzmXV_XWI79oSTMs4kAMkck453jeUxcQz4BoP0TgS83qJl2KdTVHsnlZ7glLMsnBf6IrJmn1qEHXMzEW2nwm1C8pbqcvCsYChJgMBo0nJ_"/>
+<div class="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary-container/20 backdrop-blur-sm p-4 border border-secondary-container flex items-center justify-center text-center">
+<span class="font-label-caps text-[10px] text-white">EST. 1966<br/>SEOUL</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-margin px-gutter border-t border-[#D4AF37]/10 mb-20">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-xs">
+<span class="text-xl font-black text-[#D4AF37] tracking-tighter uppercase font-['Noto_Serif'] mb-4 block">ITF MASTERY</span>
+<p class="text-body-md text-on-surface-variant italic">The path of the practitioner is one of constant refinement. Indomitable spirit is the key.</p>
+</div>
+<div class="grid grid-cols-2 gap-margin">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-on-background mb-2">LINEAGE</span>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">About GM Scott Craig</a>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">ITF History</a>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">General Choi Hong Hi</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-on-background mb-2">ACADEMY</span>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">Community</a>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">Dojang Finder</a>
+<a class="text-body-md text-on-surface-variant hover:text-tertiary transition-colors" href="#">Support</a>
+</div>
+</div>
+</div>
+<div class="mt-margin pt-unit border-t border-outline/10 text-center">
+<span class="text-[10px] font-label-caps text-on-surface-variant/40">© 2024 ITF MASTERY TIMELINE. ALL RIGHTS RESERVED.</span>
+</div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-[#252525] border-t border-[#D4AF37]/20 shadow-2xl">
+<div class="flex flex-col items-center justify-center text-red-600 bg-black/20 rounded-none border-t-2 border-red-600 pt-2 pb-1">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest">HOME</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest uppercase">TIMELINE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest uppercase">CULTURE</span>
+</div>
+<div class="flex flex-col items-center justify-center text-white/50 pt-2 pb-1 hover:text-white transition-opacity">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Noto_Serif'] text-[10px] font-bold tracking-widest uppercase">PROFILE</span>
+</div>
+</nav>
+<!-- Contextual FAB (Hidden on this specific scroll position or screen intent if needed, but active here for CTA) -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="w-14 h-14 bg-secondary-container text-white rounded-none border border-[#D4AF37] flex items-center justify-center shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</body></html>

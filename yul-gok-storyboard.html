@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Yul-Gok Tul — Storyboard | Grand Master Scott Craig</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --gold: #D4AF37;
+  --red: #ac012c;
+  --black: #121414;
+  --surface: #1e2020;
+  --surface-high: #282a2b;
+  --surface-highest: #333535;
+  --on-surface: #e2e2e2;
+  --on-surface-dim: #c4c7c7;
+  --outline: #444748;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: var(--black);
+  color: var(--on-surface);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+.hanji {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+.serif { font-family: 'Noto Serif', serif; }
+.gold { color: var(--gold); }
+.red { color: var(--red); }
+
+/* ─── Header ─── */
+.site-header {
+  border-bottom: 1px solid var(--outline);
+  padding: 16px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(18,20,20,0.95);
+  backdrop-filter: blur(8px);
+}
+.site-header .logo {
+  font-family: 'Noto Serif', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.site-header .back-link {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-header .back-link:hover { color: var(--gold); }
+
+/* ─── Hero ─── */
+.hero {
+  padding: 80px 48px 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Noto Serif', serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.hero h1 .hanja {
+  display: block;
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+.hero-desc {
+  max-width: 600px;
+  color: var(--on-surface-dim);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+.hero-meta {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.meta-item label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+  margin-bottom: 4px;
+}
+.meta-item span {
+  font-family: 'Noto Serif', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ─── Cal divider ─── */
+.cal-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold) 30%, var(--red) 50%, var(--gold) 70%, transparent);
+  margin: 0 48px;
+  opacity: 0.5;
+}
+
+/* ─── Two-col layout ─── */
+.content-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 48px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .content-wrap { grid-template-columns: 1fr; padding: 24px; }
+  .hero { padding: 48px 24px 40px; }
+  .cal-divider { margin: 0 24px; }
+}
+
+/* ─── Sidebar ─── */
+.sidebar { position: sticky; top: 80px; }
+.sidebar-block {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.sidebar-block h3 {
+  font-family: 'Noto Serif', serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--outline);
+}
+
+/* Pattern diagram */
+.pattern-diagram svg { display: block; width: 100%; }
+
+/* Section filters */
+.section-filters { display: flex; flex-direction: column; gap: 4px; }
+.filter-btn {
+  background: none;
+  border: 1px solid var(--outline);
+  color: var(--on-surface-dim);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active { background: var(--red); border-color: var(--red); color: #fff; }
+.filter-btn .count {
+  margin-left: auto;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* Video ref block */
+.video-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-high);
+  border: 1px solid var(--outline);
+  padding: 16px;
+  text-decoration: none;
+  color: var(--on-surface);
+  transition: border-color 0.2s;
+}
+.video-link:hover { border-color: var(--gold); }
+.video-link .play-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.video-link .play-icon svg { width: 16px; height: 16px; fill: #fff; }
+.video-link .vtext small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+  margin-bottom: 2px;
+}
+.video-link .vtext span { font-size: 13px; font-weight: 600; }
+
+/* Legend */
+.legend { display: flex; flex-direction: column; gap: 8px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--on-surface-dim); }
+.legend-dot { width: 10px; height: 10px; flex-shrink: 0; }
+
+/* ─── Main storyboard grid ─── */
+.storyboard-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.storyboard-header h2 {
+  font-family: 'Noto Serif', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+.storyboard-header .showing {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+}
+
+.section-group { margin-bottom: 48px; }
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.section-label .section-tag {
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  font-weight: 700;
+}
+.section-label h3 {
+  font-family: 'Noto Serif', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.section-label .section-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--outline), transparent);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ─── Movement Card ─── */
+.movement-card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  position: relative;
+  cursor: default;
+  transition: border-color 0.25s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.movement-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.movement-card.hidden { display: none; }
+
+/* Left accent bar */
+.movement-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 8px;
+  border-bottom: 1px solid var(--outline);
+}
+.card-num {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+}
+.card-num strong {
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+}
+.card-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.badge {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  font-weight: 700;
+}
+.badge-fast { background: var(--red); color: #fff; }
+.badge-dir { background: var(--surface-highest); color: var(--gold); border: 1px solid var(--outline); }
+
+/* SVG figure area */
+.card-figure {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.025) 1px, transparent 0);
+  background-size: 16px 16px;
+  min-height: 120px;
+}
+.card-figure svg {
+  width: 70px;
+  height: 90px;
+  overflow: visible;
+}
+
+/* Card body */
+.card-body { padding: 12px 14px 16px; flex: 1; }
+.card-technique {
+  font-family: 'Noto Serif', serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  color: var(--on-surface);
+}
+.card-korean {
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.card-stance {
+  font-size: 11px;
+  color: var(--on-surface-dim);
+  line-height: 1.4;
+}
+.card-stance strong { color: var(--on-surface); font-weight: 600; }
+.card-note {
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ─── Footer ─── */
+.page-footer {
+  margin-top: 80px;
+  border-top: 1px solid var(--outline);
+  padding: 40px 48px;
+  text-align: center;
+  color: var(--on-surface-dim);
+  font-size: 13px;
+}
+.page-footer .footer-logo {
+  font-family: 'Noto Serif', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+/* ─── Print styles ─── */
+@media print {
+  .site-header, .sidebar, .section-filters { display: none; }
+  .content-wrap { grid-template-columns: 1fr; }
+  .movement-card { break-inside: avoid; }
+}
+</style>
+</head>
+<body class="hanji">
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo">Grand Master Scott Craig · TKD Mastery</div>
+  <a class="back-link" href="index.html">← Back to Home</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-tag">ITF Pattern · 5th Form · Blue Belt</p>
+  <h1 class="serif">
+    Yul-Gok Tul
+    <span class="hanja">율곡 틀 &nbsp;·&nbsp; 栗谷</span>
+  </h1>
+  <div class="hero-desc">
+    Named after the great Korean philosopher and scholar Yi I (1536–1584), whose pen name was Yul-Gok — the "Confucius of Korea."
+    The 38 movements represent his birthplace on the 38th parallel, and the pattern diagram traces the Chinese character <strong class="gold">士</strong> (scholar),
+    embodying the union of intellect and martial discipline.
+  </div>
+  <div class="hero-meta">
+    <div class="meta-item"><label>Movements</label><span>38</span></div>
+    <div class="meta-item"><label>Diagram</label><span>士 Scholar</span></div>
+    <div class="meta-item"><label>Level</label><span>2nd Geup</span></div>
+    <div class="meta-item"><label>Performer</label><span>GM Scott Craig</span></div>
+  </div>
+</section>
+
+<div class="cal-divider"></div>
+
+<!-- MAIN CONTENT -->
+<div class="content-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Pattern Diagram -->
+    <div class="sidebar-block pattern-diagram">
+      <h3>Pattern Diagram — 士</h3>
+      <svg viewBox="0 0 180 220" xmlns="http://www.w3.org/2000/svg" style="margin-top:8px;">
+        <!-- Grid lines subtle -->
+        <line x1="90" y1="0" x2="90" y2="220" stroke="#444748" stroke-width="0.5" stroke-dasharray="3,4"/>
+        <line x1="0" y1="110" x2="180" y2="110" stroke="#444748" stroke-width="0.5" stroke-dasharray="3,4"/>
+
+        <!-- 士 character shape (the pattern path) -->
+        <!-- Top horizontal bar -->
+        <line x1="30" y1="30" x2="150" y2="30" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Vertical stem -->
+        <line x1="90" y1="30" x2="90" y2="190" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Bottom horizontal bar -->
+        <line x1="20" y1="190" x2="160" y2="190" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+
+        <!-- Direction labels -->
+        <text x="90" y="12" text-anchor="middle" fill="#c4c7c7" font-family="Work Sans" font-size="9" letter-spacing="1">D (Front)</text>
+        <text x="90" y="215" text-anchor="middle" fill="#c4c7c7" font-family="Work Sans" font-size="9" letter-spacing="1">A (Rear)</text>
+        <text x="8" y="113" text-anchor="middle" fill="#c4c7c7" font-family="Work Sans" font-size="9" letter-spacing="1">B</text>
+        <text x="172" y="113" text-anchor="middle" fill="#c4c7c7" font-family="Work Sans" font-size="9" letter-spacing="1">C</text>
+
+        <!-- Movement group dots -->
+        <!-- Group 1-3: B side top -->
+        <circle cx="30" cy="30" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="30" y="34" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="7" font-weight="700">1-3</text>
+        <!-- Group 4-6: C side top -->
+        <circle cx="150" cy="30" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="150" y="34" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="7" font-weight="700">4-6</text>
+        <!-- Group 7-10: Forward walk to D -->
+        <circle cx="90" cy="70" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="90" y="74" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="7" font-weight="700">7-10</text>
+        <!-- Group 11-13: EF diagonal -->
+        <circle cx="40" cy="110" r="7" fill="#282a2b" stroke="#D4AF37" stroke-width="1"/>
+        <text x="40" y="114" text-anchor="middle" fill="#D4AF37" font-family="Work Sans" font-size="7" font-weight="700">11-13</text>
+        <!-- Group 14-16: GH diagonal -->
+        <circle cx="140" cy="110" r="7" fill="#282a2b" stroke="#D4AF37" stroke-width="1"/>
+        <text x="140" y="114" text-anchor="middle" fill="#D4AF37" font-family="Work Sans" font-size="7" font-weight="700">14-16</text>
+        <!-- Center: 17-22 -->
+        <circle cx="90" cy="130" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="90" y="134" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="6" font-weight="700">17-22</text>
+        <!-- 23-28 -->
+        <circle cx="90" cy="160" r="7" fill="#282a2b" stroke="#D4AF37" stroke-width="1"/>
+        <text x="90" y="164" text-anchor="middle" fill="#D4AF37" font-family="Work Sans" font-size="6" font-weight="700">23-28</text>
+        <!-- Bottom bar left -->
+        <circle cx="20" cy="190" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="20" y="194" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="6" font-weight="700">29-32</text>
+        <!-- Bottom bar right -->
+        <circle cx="160" cy="190" r="7" fill="#ac012c" stroke="#D4AF37" stroke-width="1"/>
+        <text x="160" y="194" text-anchor="middle" fill="#fff" font-family="Work Sans" font-size="6" font-weight="700">33-38</text>
+
+        <!-- Start marker -->
+        <polygon points="90,108 84,96 96,96" fill="#D4AF37" opacity="0.6"/>
+        <text x="90" y="94" text-anchor="middle" fill="#D4AF37" font-family="Work Sans" font-size="7">START</text>
+      </svg>
+    </div>
+
+    <!-- Video Reference -->
+    <div class="sidebar-block">
+      <h3>Video Reference</h3>
+      <a class="video-link" href="https://www.youtube.com/watch?v=mUxOMUlygb8&t=35s" target="_blank">
+        <div class="play-icon">
+          <svg viewBox="0 0 16 16"><path d="M6 4l6 4-6 4V4z"/></svg>
+        </div>
+        <div class="vtext">
+          <small>YouTube · Grand Master Craig</small>
+          <span>Yul-Gok Performance</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Section Filter -->
+    <div class="sidebar-block">
+      <h3>Filter by Section</h3>
+      <div class="section-filters" id="filters">
+        <button class="filter-btn active" data-section="all" onclick="filterSection('all', this)">
+          All Movements <span class="count">38</span>
+        </button>
+        <button class="filter-btn" data-section="A" onclick="filterSection('A', this)">
+          Sec A · Sitting Opening <span class="count">6</span>
+        </button>
+        <button class="filter-btn" data-section="B" onclick="filterSection('B', this)">
+          Sec B · Forward Advance <span class="count">4</span>
+        </button>
+        <button class="filter-btn" data-section="C" onclick="filterSection('C', this)">
+          Sec C · NE Diagonal <span class="count">3</span>
+        </button>
+        <button class="filter-btn" data-section="D" onclick="filterSection('D', this)">
+          Sec D · NW Diagonal <span class="count">3</span>
+        </button>
+        <button class="filter-btn" data-section="E" onclick="filterSection('E', this)">
+          Sec E · Twin Blocks / Return <span class="count">6</span>
+        </button>
+        <button class="filter-btn" data-section="F" onclick="filterSection('F', this)">
+          Sec F · Side Lines <span class="count">6</span>
+        </button>
+        <button class="filter-btn" data-section="G" onclick="filterSection('G', this)">
+          Sec G · Bottom Bar <span class="count">4</span>
+        </button>
+        <button class="filter-btn" data-section="H" onclick="filterSection('H', this)">
+          Sec H · Closing <span class="count">6</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="sidebar-block">
+      <h3>Legend</h3>
+      <div class="legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--gold)"></div>
+          Striking / active limb
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#555"></div>
+          Support / rear limb
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--red)"></div>
+          FAST — paired movements
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:var(--surface-highest); border:1px solid var(--gold)"></div>
+          Direction facing
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- STORYBOARD -->
+  <main id="storyboard">
+    <div class="storyboard-header">
+      <h2 class="serif">Movement Storyboard</h2>
+      <span class="showing" id="showing-count">Showing all 38 movements</span>
+    </div>
+    <div id="cards-container"></div>
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="footer-logo">Grand Master Scott Craig</div>
+  <p>ITF Tae Kwon Do · Yul-Gok Tul · 38 Movements</p>
+  <p style="margin-top:8px; font-size:11px; opacity:0.5; letter-spacing:0.1em; text-transform:uppercase;">
+    Pattern sequence based on ITF curriculum — verify against video reference above
+  </p>
+</footer>
+
+<script>
+// ─── SVG FIGURE GENERATOR ──────────────────────────────────────────────────
+
+function makeFigure(type) {
+  // Common colors
+  const C = { body: '#c4c7c7', active: '#D4AF37', joint: '#e2e2e2', inactive: '#555' };
+
+  // All SVGs use viewBox="0 0 70 90"
+  const defs = {
+
+    // Sitting stance, left arm extends to side (block)
+    'sitting-block-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="48" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="30" x2="10" y2="32" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="10" cy="32" r="3" fill="${C.active}"/>
+      <line x1="35" y1="30" x2="55" y2="25" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="48" x2="12" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="48" x2="58" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="12" y1="78" x2="2" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="58" y1="78" x2="68" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Sitting stance, right arm extends
+    'sitting-block-right': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="48" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="30" x2="15" y2="25" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="30" x2="60" y2="32" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="60" cy="32" r="3" fill="${C.active}"/>
+      <line x1="35" y1="48" x2="12" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="48" x2="58" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="12" y1="78" x2="2" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="58" y1="78" x2="68" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Walking stance, right punch forward
+    'middle-punch-right': `
+      <circle cx="28" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="28" y1="17" x2="28" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="28" y1="28" x2="5" y2="38" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="28" y1="28" x2="60" y2="30" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="60" cy="30" r="4" fill="${C.active}"/>
+      <line x1="28" y1="46" x2="14" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="28" y1="46" x2="44" y2="72" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="14" y1="78" x2="4" y2="82" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="44" y1="72" x2="62" y2="76" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>`,
+
+    // Walking stance, left punch forward
+    'middle-punch-left': `
+      <circle cx="42" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="42" y1="17" x2="42" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="42" y1="28" x2="10" y2="30" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="10" cy="30" r="4" fill="${C.active}"/>
+      <line x1="42" y1="28" x2="65" y2="38" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="42" y1="46" x2="26" y2="72" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="42" y1="46" x2="56" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="26" y1="72" x2="8" y2="76" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="56" y1="78" x2="66" y2="82" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>`,
+
+    // Low block left
+    'low-block-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="60" y2="24" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="30" x2="10" y2="58" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="10" cy="58" r="3.5" fill="${C.active}"/>
+      <line x1="35" y1="46" x2="20" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="52" y2="74" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="20" y1="78" x2="8" y2="82" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="52" y1="74" x2="64" y2="78" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>`,
+
+    // Front kick right leg raised
+    'front-kick-right': `
+      <circle cx="30" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="30" y1="17" x2="30" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="30" y1="28" x2="8" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="30" y1="28" x2="52" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="30" y1="46" x2="18" y2="82" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="18" y1="82" x2="8" y2="86" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="30" y1="46" x2="42" y2="62" stroke="${C.active}" stroke-width="2"/>
+      <line x1="42" y1="62" x2="62" y2="44" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="62" cy="44" r="4" fill="${C.active}"/>`,
+
+    // Front kick left leg raised
+    'front-kick-left': `
+      <circle cx="40" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="40" y1="17" x2="40" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="40" y1="28" x2="18" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="40" y1="28" x2="62" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="40" y1="46" x2="52" y2="82" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="52" y1="82" x2="62" y2="86" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="40" y1="46" x2="28" y2="62" stroke="${C.active}" stroke-width="2"/>
+      <line x1="28" y1="62" x2="8" y2="44" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="8" cy="44" r="4" fill="${C.active}"/>`,
+
+    // L-stance knife hand guard block (right hand leading)
+    'knife-hand-right': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="26" x2="58" y2="20" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="58" cy="20" r="3.5" fill="${C.active}"/>
+      <line x1="35" y1="30" x2="12" y2="38" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="46" x2="22" y2="68" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="48" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="68" x2="10" y2="72" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="48" y1="76" x2="62" y2="78" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // L-stance knife hand guard block (left hand leading)
+    'knife-hand-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="26" x2="12" y2="20" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="12" cy="20" r="3.5" fill="${C.active}"/>
+      <line x1="35" y1="30" x2="58" y2="38" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="46" x2="22" y2="68" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="48" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="68" x2="10" y2="72" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="48" y1="76" x2="62" y2="78" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Inner forearm middle block left
+    'inner-block-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="60" y2="40" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="28" x2="14" y2="22" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="14" cy="22" r="3" fill="${C.active}"/>
+      <line x1="35" y1="46" x2="22" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="48" y2="74" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="76" x2="8" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="48" y1="74" x2="62" y2="76" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Inner forearm middle block right
+    'inner-block-right': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="10" y2="40" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="28" x2="56" y2="22" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="56" cy="22" r="3" fill="${C.active}"/>
+      <line x1="35" y1="46" x2="22" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="48" y2="74" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="76" x2="8" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="48" y1="74" x2="62" y2="76" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Double forearm high block
+    'double-forearm-high': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="12" y2="16" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="35" y1="28" x2="58" y2="16" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="12" y1="16" x2="22" y2="8" stroke="${C.active}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="58" y1="16" x2="48" y2="8" stroke="${C.active}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="35" y1="46" x2="20" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="50" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="20" y1="78" x2="6" y2="82" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="50" y1="78" x2="64" y2="82" stroke="${C.body}" stroke-width="2.5" stroke-linecap="round"/>`,
+
+    // Twin forearm block (both arms extended parallel front)
+    'twin-forearm': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="26" x2="10" y2="24" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="35" y1="32" x2="10" y2="34" stroke="${C.active}" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="10" cy="29" r="4" fill="${C.active}" opacity="0.8"/>
+      <line x1="35" y1="28" x2="58" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="46" x2="22" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="50" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="78" x2="8" y2="82" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="50" y1="76" x2="62" y2="80" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Elbow strike left
+    'elbow-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="18" y2="22" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="18" y1="22" x2="8" y2="34" stroke="${C.active}" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="18" cy="22" r="5" fill="none" stroke="${C.active}" stroke-width="2"/>
+      <line x1="35" y1="28" x2="60" y2="38" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="46" x2="20" y2="78" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="52" y2="74" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="20" y1="78" x2="6" y2="82" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="52" y1="74" x2="64" y2="78" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+
+    // Outer forearm guarding block L-stance
+    'outer-block-left': `
+      <circle cx="35" cy="10" r="7" fill="none" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="17" x2="35" y2="46" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="28" x2="62" y2="36" stroke="${C.inactive}" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="35" y1="28" x2="8" y2="28" stroke="${C.active}" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="8" cy="28" r="3.5" fill="${C.active}"/>
+      <line x1="35" y1="46" x2="22" y2="74" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="35" y1="46" x2="50" y2="76" stroke="${C.body}" stroke-width="1.5"/>
+      <line x1="22" y1="74" x2="8" y2="78" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>
+      <line x1="50" y1="76" x2="62" y2="78" stroke="${C.body}" stroke-width="2" stroke-linecap="round"/>`,
+  };
+
+  return defs[type] || defs['middle-punch-right'];
+}
+
+// ─── MOVEMENT DATA ─────────────────────────────────────────────────────────
+
+const movements = [
+  // SECTION A: Lateral Sitting Stance Opening
+  { id:1, sec:'A', secName:'Sitting Stance — First Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Left Outer Forearm Middle Block', techKr:'왼 팔목 중단 막기', fig:'sitting-block-left',
+    note:null, desc:'Move left foot to B. Sitting stance facing D. Left fist extended horizontally.' },
+  { id:2, sec:'A', secName:'Sitting Stance — First Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Right Middle Punch', techKr:'오른 주먹 중단 지르기', fig:'middle-punch-right',
+    note:'FAST with 3', desc:'Execute a middle punch toward D with the right fist.' },
+  { id:3, sec:'A', secName:'Sitting Stance — First Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Left Middle Punch', techKr:'왼 주먹 중단 지르기', fig:'middle-punch-left',
+    note:'FAST with 2', desc:'Execute a middle punch toward D with the left fist.' },
+  { id:4, sec:'A', secName:'Sitting Stance — Second Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Right Outer Forearm Middle Block', techKr:'오른 팔목 중단 막기', fig:'sitting-block-right',
+    note:null, desc:'Move right foot to A. Sitting stance facing D. Right fist extended horizontally.' },
+  { id:5, sec:'A', secName:'Sitting Stance — Second Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Left Middle Punch', techKr:'왼 주먹 중단 지르기', fig:'middle-punch-left',
+    note:'FAST with 6', desc:'Execute a middle punch toward D with the left fist.' },
+  { id:6, sec:'A', secName:'Sitting Stance — Second Wing', dir:'D', stance:'Sitting Stance', stanceKr:'주춤 서기',
+    tech:'Right Middle Punch', techKr:'오른 주먹 중단 지르기', fig:'middle-punch-right',
+    note:'FAST with 5', desc:'Execute a middle punch toward D with the right fist.' },
+
+  // SECTION B: Forward Advance
+  { id:7, sec:'B', secName:'Forward Advance', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Low Section Block', techKr:'왼 아래막기', fig:'low-block-left',
+    note:null, desc:'Move left foot toward D. Left walking stance. Left arm sweeps down to low block.' },
+  { id:8, sec:'B', secName:'Forward Advance', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Middle Obverse Punch', techKr:'오른 중단 바로지르기', fig:'middle-punch-right',
+    note:null, desc:'Step right foot forward. Right walking stance D. Right obverse middle punch.' },
+  { id:9, sec:'B', secName:'Forward Advance', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:null, desc:'Step left foot forward. Left walking stance D. Left obverse middle punch.' },
+  { id:10, sec:'B', secName:'Forward Advance', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Front Snap Kick → Right Middle Punch', techKr:'오른 앞차기 → 오른 지르기', fig:'front-kick-right',
+    note:null, desc:'Execute right front snap kick, land in right walking stance D, deliver right middle punch.' },
+
+  // SECTION C: NE Diagonal (EF direction)
+  { id:11, sec:'C', secName:'NE Diagonal — Knife Hand', dir:'EF', stance:'Left L-Stance', stanceKr:'왼 뒷굽이',
+    tech:'Right Knife Hand Guarding Block', techKr:'오른 손날 대비막기', fig:'knife-hand-right',
+    note:null, desc:'Pivot left 90°. Left L-stance toward EF. Right knife hand guarding block.' },
+  { id:12, sec:'C', secName:'NE Diagonal — Knife Hand', dir:'EF', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Middle Obverse Punch', techKr:'오른 중단 바로지르기', fig:'middle-punch-right',
+    note:null, desc:'Step right foot forward into walking stance EF. Right obverse middle punch.' },
+  { id:13, sec:'C', secName:'NE Diagonal — Knife Hand', dir:'EF', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Front Kick → Left Middle Punch', techKr:'왼 앞차기 → 왼 지르기', fig:'front-kick-left',
+    note:null, desc:'Execute left front snap kick, land in left walking stance EF, left middle obverse punch.' },
+
+  // SECTION D: NW Diagonal (GH direction)
+  { id:14, sec:'D', secName:'NW Diagonal — Knife Hand', dir:'GH', stance:'Right L-Stance', stanceKr:'오른 뒷굽이',
+    tech:'Left Knife Hand Guarding Block', techKr:'왼 손날 대비막기', fig:'knife-hand-left',
+    note:null, desc:'Pivot right 180°. Right L-stance toward GH. Left knife hand guarding block.' },
+  { id:15, sec:'D', secName:'NW Diagonal — Knife Hand', dir:'GH', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:null, desc:'Step left foot forward into walking stance GH. Left obverse middle punch.' },
+  { id:16, sec:'D', secName:'NW Diagonal — Knife Hand', dir:'GH', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Front Kick → Right Middle Punch', techKr:'오른 앞차기 → 오른 지르기', fig:'front-kick-right',
+    note:null, desc:'Execute right front snap kick, land in right walking stance GH, right middle punch.' },
+
+  // SECTION E: Twin Blocks / Return Forward
+  { id:17, sec:'E', secName:'Twin Blocks — Return to D', dir:'D', stance:'Left L-Stance', stanceKr:'왼 뒷굽이',
+    tech:'Left Inner Forearm Middle Block', techKr:'왼 안팔목 중단막기', fig:'inner-block-left',
+    note:null, desc:'Pivot left 90° to face D. Left L-stance. Left inner forearm middle block.' },
+  { id:18, sec:'E', secName:'Twin Blocks — Return to D', dir:'D', stance:'Right L-Stance', stanceKr:'오른 뒷굽이',
+    tech:'Right Inner Forearm Middle Block', techKr:'오른 안팔목 중단막기', fig:'inner-block-right',
+    note:'FAST with 17', desc:'Shift to right L-stance D. Right inner forearm middle block. Perform fast with 17.' },
+  { id:19, sec:'E', secName:'Twin Blocks — Return to D', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:null, desc:'Step left foot forward. Left walking stance D. Left obverse middle punch.' },
+  { id:20, sec:'E', secName:'Twin Blocks — Return to D', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Front Kick → Right Middle Punch', techKr:'오른 앞차기 → 오른 지르기', fig:'front-kick-right',
+    note:null, desc:'Right front snap kick, land in right walking stance D, right middle obverse punch.' },
+  { id:21, sec:'E', secName:'Twin Blocks — Side C', dir:'C', stance:'Right L-Stance', stanceKr:'오른 뒷굽이',
+    tech:'Right Outer Forearm Guarding Block', techKr:'오른 바깥팔목 대비막기', fig:'inner-block-right',
+    note:null, desc:'Pivot right 90° to face C. Right L-stance. Right outer forearm guarding block.' },
+  { id:22, sec:'E', secName:'Twin Blocks — Side C', dir:'C', stance:'Left L-Stance', stanceKr:'왼 뒷굽이',
+    tech:'Left Outer Forearm Guarding Block', techKr:'왼 바깥팔목 대비막기', fig:'inner-block-left',
+    note:'FAST with 21', desc:'Shift to left L-stance C. Left outer forearm guarding block. Fast with 21.' },
+
+  // SECTION F: Side Lines
+  { id:23, sec:'F', secName:'Side Line — C Direction', dir:'C', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:null, desc:'Step left foot forward into walking stance C. Left obverse middle punch.' },
+  { id:24, sec:'F', secName:'Side Line — C Direction', dir:'C', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Front Kick → Right Middle Punch', techKr:'오른 앞차기 → 오른 지르기', fig:'front-kick-right',
+    note:null, desc:'Right front snap kick, land in right walking stance C, right middle punch.' },
+  { id:25, sec:'F', secName:'Side Line — B Direction', dir:'B', stance:'Left L-Stance', stanceKr:'왼 뒷굽이',
+    tech:'Left Outer Forearm Guarding Block', techKr:'왼 바깥팔목 대비막기', fig:'outer-block-left',
+    note:null, desc:'Pivot left 180° to face B. Left L-stance. Left outer forearm guarding block.' },
+  { id:26, sec:'F', secName:'Side Line — B Direction', dir:'B', stance:'Right L-Stance', stanceKr:'오른 뒷굽이',
+    tech:'Right Outer Forearm Guarding Block', techKr:'오른 바깥팔목 대비막기', fig:'inner-block-right',
+    note:'FAST with 25', desc:'Shift to right L-stance B. Right outer forearm guarding block. Fast with 25.' },
+  { id:27, sec:'F', secName:'Side Line — B Direction', dir:'B', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Middle Obverse Punch', techKr:'오른 중단 바로지르기', fig:'middle-punch-right',
+    note:null, desc:'Step right foot forward. Right walking stance B. Right obverse middle punch.' },
+  { id:28, sec:'F', secName:'Side Line — B Direction', dir:'B', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Front Kick → Left Middle Punch', techKr:'왼 앞차기 → 왼 지르기', fig:'front-kick-left',
+    note:null, desc:'Left front snap kick, land in left walking stance B, left obverse middle punch.' },
+
+  // SECTION G: Bottom Bar (closing advance)
+  { id:29, sec:'G', secName:'Closing Advance', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Side Elbow Thrust', techKr:'왼 옆 팔꿈치 치기', fig:'elbow-left',
+    note:null, desc:'Pivot right 90° to face D. Left walking stance. Left side elbow thrust.' },
+  { id:30, sec:'G', secName:'Closing Advance', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Middle Obverse Punch', techKr:'오른 중단 바로지르기', fig:'middle-punch-right',
+    note:'FAST with 31', desc:'Step right foot forward. Right walking stance D. Right middle punch (fast with 31).' },
+  { id:31, sec:'G', secName:'Closing Advance', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:'FAST with 30', desc:'Step left foot forward. Left walking stance D. Left middle punch (fast with 30).' },
+  { id:32, sec:'G', secName:'Closing Advance', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Front Kick → Right Middle Punch', techKr:'오른 앞차기 → 오른 지르기', fig:'front-kick-right',
+    note:null, desc:'Right front snap kick, land in right walking stance D, right middle punch.' },
+
+  // SECTION H: Final Closing
+  { id:33, sec:'H', secName:'Final Closing', dir:'EF', stance:'Left L-Stance', stanceKr:'왼 뒷굽이',
+    tech:'Left Inner Forearm Middle Block', techKr:'왼 안팔목 중단막기', fig:'inner-block-left',
+    note:null, desc:'Pivot left 90°. Left L-stance toward EF. Left inner forearm middle block.' },
+  { id:34, sec:'H', secName:'Final Closing', dir:'GH', stance:'Right L-Stance', stanceKr:'오른 뒷굽이',
+    tech:'Right Inner Forearm Middle Block', techKr:'오른 안팔목 중단막기', fig:'inner-block-right',
+    note:null, desc:'Pivot right 180°. Right L-stance toward GH. Right inner forearm middle block.' },
+  { id:35, sec:'H', secName:'Final Closing', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Low Section Block', techKr:'왼 아래막기', fig:'low-block-left',
+    note:null, desc:'Pivot left 90° back to D. Left walking stance. Left low section block.' },
+  { id:36, sec:'H', secName:'Final Closing', dir:'D', stance:'Right Walking Stance', stanceKr:'오른 보행 서기',
+    tech:'Right Middle Obverse Punch', techKr:'오른 중단 바로지르기', fig:'middle-punch-right',
+    note:'FAST with 37', desc:'Step right foot forward. Right walking stance D. Right middle punch (fast with 37).' },
+  { id:37, sec:'H', secName:'Final Closing', dir:'D', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Middle Obverse Punch', techKr:'왼 중단 바로지르기', fig:'middle-punch-left',
+    note:'FAST with 36', desc:'Step left foot forward. Left walking stance D. Left middle punch (fast with 36).' },
+  { id:38, sec:'H', secName:'Final Closing', dir:'B', stance:'Left Walking Stance', stanceKr:'왼 보행 서기',
+    tech:'Left Double Forearm High Block', techKr:'왼 두팔 높이 막기', fig:'double-forearm-high',
+    note:'END', desc:'Move left foot to B. Left walking stance toward B. Left double forearm high block. Return to ready.' },
+];
+
+// ─── SECTION COLORS ──────────────────────────────────────────────────────
+const sectionColors = {
+  'A': '#ac012c', 'B': '#7a4a00', 'C': '#1a5a1a',
+  'D': '#1a3a7a', 'E': '#5a1a7a', 'F': '#7a5a00',
+  'G': '#1a5a5a', 'H': '#D4AF37'
+};
+
+// ─── RENDER ───────────────────────────────────────────────────────────────
+function renderCards(filterSec = 'all') {
+  const container = document.getElementById('cards-container');
+  container.innerHTML = '';
+
+  // Group by section
+  const sections = {};
+  movements.forEach(m => {
+    if (!sections[m.sec]) sections[m.sec] = { name: m.secName, items: [] };
+    sections[m.sec].items.push(m);
+  });
+
+  let shownCount = 0;
+
+  Object.entries(sections).forEach(([sec, grp]) => {
+    const visibleItems = grp.items.filter(m => filterSec === 'all' || m.sec === filterSec);
+    if (visibleItems.length === 0) return;
+
+    const sectionDiv = document.createElement('div');
+    sectionDiv.className = 'section-group';
+
+    // Section header
+    const labelDiv = document.createElement('div');
+    labelDiv.className = 'section-label';
+    labelDiv.innerHTML = `
+      <span class="section-tag" style="background:${sectionColors[sec] || '#ac012c'}">Section ${sec}</span>
+      <h3>${grp.name}</h3>
+      <div class="section-line"></div>
+    `;
+    sectionDiv.appendChild(labelDiv);
+
+    // Cards grid
+    const grid = document.createElement('div');
+    grid.className = 'cards-grid';
+
+    visibleItems.forEach(m => {
+      shownCount++;
+      const card = document.createElement('div');
+      card.className = 'movement-card';
+      card.dataset.section = m.sec;
+
+      card.innerHTML = `
+        <div class="card-header">
+          <div class="card-num">
+            <span>Move</span>
+            <strong>${m.id}</strong>
+          </div>
+          <div class="card-badges">
+            ${m.note && m.note !== 'END' ? `<span class="badge badge-fast">⚡ ${m.note}</span>` : ''}
+            ${m.note === 'END' ? `<span class="badge badge-fast" style="background:#D4AF37;color:#121414">★ END</span>` : ''}
+            <span class="badge badge-dir">→ ${m.dir}</span>
+          </div>
+        </div>
+        <div class="card-figure">
+          <svg viewBox="0 0 70 90" xmlns="http://www.w3.org/2000/svg">
+            ${makeFigure(m.fig)}
+          </svg>
+        </div>
+        <div class="card-body">
+          <div class="card-technique">${m.tech}</div>
+          <div class="card-korean">${m.techKr}</div>
+          <div class="card-stance">
+            <strong>${m.stance}</strong><br/>
+            <span style="font-size:10px;color:var(--gold)">${m.stanceKr}</span>
+          </div>
+          <div class="card-stance" style="margin-top:8px;font-size:11px;">${m.desc}</div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    sectionDiv.appendChild(grid);
+    container.appendChild(sectionDiv);
+  });
+
+  // Update count
+  const countText = filterSec === 'all'
+    ? 'Showing all 38 movements'
+    : `Showing ${shownCount} movement${shownCount !== 1 ? 's' : ''} · Section ${filterSec}`;
+  document.getElementById('showing-count').textContent = countText;
+}
+
+function filterSection(sec, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCards(sec);
+}
+
+// Initial render
+renderCards('all');
+</script>
+</body>
+</html>
