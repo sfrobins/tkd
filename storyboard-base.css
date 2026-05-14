@@ -65,13 +65,6 @@ body{font-family:'Work Sans',sans-serif;background:var(--black);color:var(--on-s
 .sb-hdr h2{font-family:'Noto Serif',serif;font-size:20px;font-weight:600}
 .showing{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--on-dim)}
 
-/* ── Section group ── */
-.sec-group{margin-bottom:40px}
-.sec-label{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.sec-tag{font-size:9px;letter-spacing:.15em;text-transform:uppercase;padding:3px 8px;font-weight:700;color:#fff;background:var(--red)}
-.sec-label h3{font-family:'Noto Serif',serif;font-size:14px;font-weight:600;color:var(--gold)}
-.sec-line{flex:1;height:1px;background:linear-gradient(to right,var(--outline),transparent)}
-
 /* ── Cards grid ── */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
 
@@ -84,6 +77,7 @@ body{font-family:'Work Sans',sans-serif;background:var(--black);color:var(--on-s
 .card-num strong{font-family:'Noto Serif',serif;font-size:18px;font-weight:900;color:var(--gold);display:block;line-height:1}
 .card-badges{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
 .badge{font-size:8px;letter-spacing:.08em;text-transform:uppercase;padding:2px 5px;font-weight:700}
+.badge-sec{max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 .badge-fast{background:var(--red);color:#fff}
 .badge-dir{background:var(--surface-highest);color:var(--gold);border:1px solid var(--outline)}
 .card-fig{padding:14px 18px;display:flex;align-items:center;justify-content:center;background:var(--surface);background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.025) 1px,transparent 0);background-size:16px 16px;min-height:110px}

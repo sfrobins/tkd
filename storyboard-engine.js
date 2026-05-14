@@ -340,63 +340,51 @@ function renderCards(filterSec) {
   const container = document.getElementById('cards-container');
   container.innerHTML = '';
 
-  const sections = {};
-  P.movements.forEach(m => {
-    if (!sections[m.sec]) sections[m.sec] = { name: m.secName, items: [] };
-    sections[m.sec].items.push(m);
-  });
-
+  // Build section → color map (stable order)
   const sectionColors = ['#ac012c','#7a4a00','#1a5a1a','#1a3a7a','#5a1a7a','#7a5a00','#1a5a5a','#4a4a00','#2a5a2a','#6a2a00'];
-  let secIdx = 0, shown = 0;
+  const secs = [...new Set(P.movements.map(m => m.sec))];
+  const secColorMap = {};
+  secs.forEach((s, i) => { secColorMap[s] = sectionColors[i % sectionColors.length]; });
 
-  Object.entries(sections).forEach(([sec, grp]) => {
-    const visItems = grp.items.filter(m => filterSec === 'all' || m.sec === filterSec);
-    if (!visItems.length) { secIdx++; return; }
+  // Filter while preserving numeric sequence order
+  const visItems = P.movements.filter(m => filterSec === 'all' || m.sec === filterSec);
 
-    const sg = document.createElement('div');
-    sg.className = 'sec-group';
-    sg.innerHTML = `<div class="sec-label">
-      <span class="sec-tag" style="background:${sectionColors[secIdx % sectionColors.length]}">Sec ${sec}</span>
-      <h3>${grp.name}</h3>
-      <div class="sec-line"></div>
-    </div>`;
+  const grid = document.createElement('div');
+  grid.className = 'cards-grid';
 
-    const grid = document.createElement('div');
-    grid.className = 'cards-grid';
-
-    visItems.forEach(m => {
-      shown++;
-      const card = document.createElement('div');
-      card.className = 'mv-card';
-      const isFast = m.note && m.note.startsWith('FAST');
-      const isEnd = m.note === 'END';
-      card.innerHTML = `
-        <div class="card-hdr">
-          <div class="card-num"><span>Move</span><strong>${m.id}</strong></div>
-          <div class="card-badges">
-            ${isFast ? `<span class="badge badge-fast">⚡ ${m.note}</span>` : ''}
-            ${isEnd ? `<span class="badge" style="background:#D4AF37;color:#121414">★ END</span>` : ''}
-            <span class="badge badge-dir">→ ${m.dir}</span>
-          </div>
+  visItems.forEach(m => {
+    const card = document.createElement('div');
+    card.className = 'mv-card';
+    const isFast = m.note && m.note.startsWith('FAST');
+    const isEnd  = m.note === 'END';
+    card.innerHTML = `
+      <div class="card-hdr">
+        <div class="card-num"><span>Move</span><strong>${m.id}</strong></div>
+        <div class="card-badges">
+          <span class="badge badge-sec" style="background:${secColorMap[m.sec]};color:#fff" title="${m.secName}">§${m.sec} · ${m.secName}</span>
+          ${isFast ? `<span class="badge badge-fast">⚡ ${m.note}</span>` : ''}
+          ${isEnd  ? `<span class="badge" style="background:#D4AF37;color:#121414">★ END</span>` : ''}
+          <span class="badge badge-dir">→ ${m.dir}</span>
         </div>
-        <div class="card-fig">
-          <svg viewBox="0 0 70 90" xmlns="http://www.w3.org/2000/svg">${makeFigure(m.fig)}</svg>
-        </div>
-        <div class="card-body">
-          <div class="card-tech">${m.tech}</div>
-          <div class="card-kr">${m.techKr}</div>
-          <div class="card-stance"><strong>${m.stance}</strong><br/><span style="font-size:9px;color:#D4AF37">${m.stanceKr}</span></div>
-          <div class="card-desc">${m.desc}</div>
-        </div>`;
-      grid.appendChild(card);
-    });
-
-    sg.appendChild(grid);
-    container.appendChild(sg);
-    secIdx++;
+      </div>
+      <div class="card-fig">
+        <svg viewBox="0 0 70 90" xmlns="http://www.w3.org/2000/svg">${makeFigure(m.fig)}</svg>
+      </div>
+      <div class="card-body">
+        <div class="card-tech">${m.tech}</div>
+        <div class="card-kr">${m.techKr}</div>
+        <div class="card-stance"><strong>${m.stance}</strong><br/><span style="font-size:9px;color:#D4AF37">${m.stanceKr}</span></div>
+        <div class="card-desc">${m.desc}</div>
+      </div>`;
+    grid.appendChild(card);
   });
 
-  const ct = filterSec === 'all' ? `All ${P.moves} movements` : `${shown} movement${shown !== 1 ? 's' : ''} · Sec ${filterSec}`;
+  container.appendChild(grid);
+
+  const shown = visItems.length;
+  const ct = filterSec === 'all'
+    ? `All ${P.moves} movements`
+    : `${shown} movement${shown !== 1 ? 's' : ''} · Section ${filterSec}`;
   document.getElementById('showing-count').textContent = ct;
 }
 
